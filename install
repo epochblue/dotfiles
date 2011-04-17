@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 # Init and update git submdules
+echo "Initializing and updating submodules..."
 git submodule init
 git submodule update
+(cd .vim/bundle/command-t && rake make)
 
 # Start with the simple dotfiles
-dotfiles=( .bashrc .bash_aliases .gitconfig .hgrc .vim .vimrc )
+dotfiles=( .bashrc .bash_aliases .hgrc .vim .vimrc )
 for i in "${dotfiles[@]}"
 do
     echo "Creating ~/$i -> $(pwd)/$i"
@@ -16,6 +18,9 @@ done
 if [ ! -f ~/.bashrc.local ]; then
   echo "# Put environment-specific stuff here." > ~/.bash_env
 fi
+
+# Make special case for .gitconfig to keep GitHub token from getting checked in
+cp .gitconfig ~/.gitconfig
 
 # Remind myself to fill in ~/.gitconfig, because I will forget
 echo

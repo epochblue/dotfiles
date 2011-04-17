@@ -4,7 +4,7 @@
 
 [github]
   user = epochblue
-  token = <TOKEN>
+  token = <API TOKEN>
 
 [color]
   diff = auto
