@@ -1,0 +1,14 @@
+[user]
+  name = Bill Israel
+  email = bill.israel@gmail.com
+
+[github]
+  user = epochblue
+  token = <TOKEN>
+
+[color]
+  diff = auto
+
+[alias]
+  st = status
+  co = checkout

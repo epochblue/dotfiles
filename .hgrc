@@ -1,0 +1,16 @@
+[ui]
+username = Bill Israel <bill.israel@gmail.com>
+editor = vim
+
+[extensions]
+bookmarks =
+fetch =
+graphlog =
+progress =
+
+[bookmarks]
+track.current = True
+
+[alias]
+upgrade = pull -u
+graph = hg glog --style compact
