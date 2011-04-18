@@ -36,17 +36,15 @@ if exists(':filetype')
 endif
 
 " ui settings
+colorscheme darkblue
 set cmdheight=2
 set ruler
 set showmatch
+set nowrap
 syntax on
 
-" colors
-colorscheme darkblue
-set bg=dark
-
 if exists('&colorcolumn')
-  set colorcolumn=85
+  set colorcolumn=100
 endif
 
 if exists('&relativenumber')
@@ -55,7 +53,7 @@ endif
 
 if has('gui_running')
   set lines=80
-  set columns=120
+  set columns=150
   set mousehide
   set guioptions=ac
   set guifont=Inconsolata:h14,Consolas:h13,Monaco:h13
