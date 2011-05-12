@@ -2,8 +2,7 @@
 
 # Init and update git submdules
 echo "Initializing and updating submodules..."
-git submodule init
-git submodule update
+git submodule update --init --recursive
 (cd .vim/bundle/command-t && rake make)
 
 # Start with the simple dotfiles
@@ -16,13 +15,12 @@ done
 
 # Create an env-specific file, just in case
 if [ ! -f ~/.bashrc.local ]; then
-  echo "# Put environment-specific stuff here." > ~/.bash_env
+  echo "# Put environment-specific stuff here." > ~/.bashrc.local
 fi
 
 # Make special case for .gitconfig to keep GitHub token from getting checked in
 cp .gitconfig ~/.gitconfig
 
 # Remind myself to fill in ~/.gitconfig, because I will forget
-echo
-echo "!! Don't forget to modify ~/.gitconfig."
+printf "!! Don't forget to modify ~/.gitconfig.\n"
 
