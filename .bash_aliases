@@ -18,10 +18,21 @@ alias hlog="hg log"
 alias hst="hg status"
 alias hin="hg incoming"
 
+# git
+alias gst="git status"
+alias gf="git fetch"
+alias gfo="git fetch origin"
+alias gp="git pull"
+alias gpo="git pull origin"
+alias gco="git checkout"
+alias gm="git merge"
+
 # etc
-alias get="curl -O"
+alias download="curl -O"
 alias src="cd ~/src"
-alias gvim="mvim --remote-silent"
+alias m="mvim --remote-silent"
+alias flushcache="sudo dscacheutil -flushcache"
+alias diff="diff --suppress-common-lines"
 
 
 # `.. 3` will `cd ../../..`
