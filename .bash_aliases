@@ -19,7 +19,7 @@ alias hst="hg status"
 alias hin="hg incoming"
 
 # git
-alias gst="git status"
+alias gs="git status"
 alias gf="git fetch"
 alias gfo="git fetch origin"
 alias gp="git pull"
@@ -33,7 +33,7 @@ alias src="cd ~/src"
 alias m="mvim --remote-silent"
 alias flushcache="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
-
+alias reload="source ~/.bashrc"
 
 # `.. 3` will `cd ../../..`
 function ..() {
