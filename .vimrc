@@ -21,15 +21,8 @@ set shiftwidth=4
 set expandtab
 
 " status line
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ 
+set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\
 set laststatus=2
-
-
-" start up pathogen
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
 
 if exists(':filetype')
   filetype plugin indent on
@@ -53,7 +46,7 @@ endif
 
 if has('gui_running')
   set lines=80
-  set columns=150
+  set columns=110
   set mousehide
   set guioptions=ac
   set guifont=Inconsolata:h14,Consolas:h13,Monaco:h13
@@ -72,27 +65,17 @@ let mapleader = ","
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
-" Textmate-like indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
 " Faster buffer-switching
-nmap <silent> <Leader>, :bp<CR>
-nmap <silent> <Leader>. :bn<CR>
-nmap <silent> <Leader>/ :b#<CR>
+nmap <silent> <Leader>h :bp<CR>
+nmap <silent> <Leader>l :bn<CR>
+nmap <silent> <Leader>, :b#<CR>
 nmap <silent> <Leader>q :bd<CR>
 
-" Map Command-T plugin to Ctrl-t
-map <C-t> <Leader>t
-
-" Show file in NERDTree
-nnoremap <silent> <C-f> :NERDTreeFind<CR> 
-
-" Saner vertical movement
-nnoremap j gj
-nnoremap k gk
+" Tabs Tabs Tabs
+map <c-t> :tabnew<cr>
+map <c-w> :tabclose<cr>
+map <c-]> :tabnext<cr>
+map <c-[> :tabprevious<cr>
 
 " Saner window management
 map <C-h> <C-w>h    " move left
@@ -100,7 +83,3 @@ map <C-j> <C-w>j    " move down
 map <C-k> <C-w>k    " move up
 map <C-l> <C-w>l    " move right
 map <C-q> <C-w>q    " close
-
-" Open NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
-
