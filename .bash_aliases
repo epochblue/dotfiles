@@ -28,9 +28,9 @@ alias gco="git checkout"
 alias gm="git merge"
 
 # etc
-alias download="curl -O"
+alias dl="curl -O"
 alias src="cd ~/src"
-alias m="mvim --remote-silent"
+alias m="mvim"
 alias flushcache="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
@@ -45,3 +45,6 @@ function ..() {
 
 # create directories and cd to the first one
 function mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
+
+# symfony find
+function sf() { find . -iname "$1" | grep -v "cache"; }
