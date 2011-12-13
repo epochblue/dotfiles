@@ -26,6 +26,7 @@ alias gp="git pull"
 alias gpo="git pull origin"
 alias gco="git checkout"
 alias gm="git merge"
+alias gsu="git submodule update --init --recursive"
 
 # etc
 alias dl="curl -O"
