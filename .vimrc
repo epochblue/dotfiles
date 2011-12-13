@@ -11,6 +11,14 @@ set wildmenu
 set showcmd
 scriptencoding utf8
 fixdel
+set backspace=indent,eol,start
+
+" searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
 
 " indentation
 set autoindent
@@ -29,7 +37,6 @@ if exists(':filetype')
 endif
 
 " ui settings
-colorscheme darkblue
 set cmdheight=2
 set ruler
 set showmatch
@@ -41,6 +48,8 @@ if exists('&relativenumber')
 endif
 
 if has('gui_running')
+  colorscheme darkblue
+  set background=dark
   set lines=100
   set columns=200
   set mousehide
@@ -50,7 +59,7 @@ endif
 
 " set shell
 if has('unix')
-  let shell='bash --login'
+  let shell='bash'
 endif
 
 " Remap the leader key
@@ -62,10 +71,10 @@ nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
 " Faster buffer-switching
-nmap <silent> <Leader>h :bp<CR>
-nmap <silent> <Leader>l :bn<CR>
-nmap <silent> <Leader>, :b#<CR>
-nmap <silent> <Leader>q :bd<CR>
+nmap <silent> <Leader>, :bp<CR>
+nmap <silent> <Leader>. :bn<CR>
+nmap <silent> <Leader>/ :b#<CR>
+nmap <silent> <Leader>q <c-w>q 
 
 " Saner window management
 map <c-h> <c-w>h    " move left
@@ -73,4 +82,19 @@ map <c-j> <c-w>j    " move down
 map <c-k> <c-w>k    " move up
 map <c-l> <c-w>l    " move right
 
-map <Leader>f :FufFile<CR>
+" NERDTree
+let NERDTreeWinSize=40
+let NERDTreeIgnore=['cache', '\.swp$']
+let NERDTreeMinimalUI=1
+
+map <c-n> :NERDTreeToggle<CR>
+map <c-m> :NERDTreeFind<CR>
+
+" Pathogen
+call pathogen#infect()
+
+" Open NERDTree by default, if we have NERDTree
+if exists(':NERDTree') 
+    NERDTreeToggle
+endif
+
