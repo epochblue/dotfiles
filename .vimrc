@@ -92,6 +92,7 @@ map <c-m> :NERDTreeFind<CR>
 " CtrlP (a fuzzy finder)
 let g:ctrlp_map='<Leader>f'
 let g:ctrlp_working_path_mode=2
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Pathogen
 call pathogen#infect()
