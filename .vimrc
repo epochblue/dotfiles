@@ -86,9 +86,12 @@ map <c-l> <c-w>l    " move right
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['cache', '\.swp$']
 let NERDTreeMinimalUI=1
-
 map <c-n> :NERDTreeToggle<CR>
 map <c-m> :NERDTreeFind<CR>
+
+" CtrlP (a fuzzy finder)
+let g:ctrlp_map='<Leader>f'
+let g:ctrlp_working_path_mode=2
 
 " Pathogen
 call pathogen#infect()
