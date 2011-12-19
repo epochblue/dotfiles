@@ -4,8 +4,10 @@
 dotfiles=( .bashrc .bash_aliases .hgrc .vim .vimrc )
 for i in "${dotfiles[@]}"
 do
-    echo "Creating ~/$i -> $(pwd)/$i"
-    ln -s $(pwd)/$i ~/$i
+    if [ ! -e ~/$i ]; then 
+        echo "Creating ~/$i -> $(pwd)/$i"
+        ln -s $(pwd)/$i ~/$i
+    fi
 done
 
 # Create an env-specific file, just in case
@@ -17,5 +19,5 @@ fi
 cp .gitconfig ~/.gitconfig
 
 # Remind myself to fill in ~/.gitconfig, because I will forget
-printf "!! Don't forget to modify ~/.gitconfig.\n"
+printf "Don't forget to modify ~/.gitconfig.\n"
 

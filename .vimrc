@@ -9,16 +9,16 @@ set encoding=utf-8
 set vb
 set wildmenu
 set showcmd
+set backspace=indent,eol,start
+filetype plugin indent on
 scriptencoding utf8
 fixdel
-set backspace=indent,eol,start
 
 " searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
 
 " indentation
 set autoindent
@@ -32,11 +32,8 @@ set expandtab
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\
 set laststatus=2
 
-if exists(':filetype')
-  filetype plugin indent on
-endif
-
 " ui settings
+colorscheme desert
 set cmdheight=2
 set ruler
 set showmatch
@@ -49,7 +46,6 @@ endif
 
 if has('gui_running')
   colorscheme darkblue
-  set background=dark
   set lines=100
   set columns=200
   set mousehide
