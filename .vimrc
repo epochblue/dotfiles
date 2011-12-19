@@ -82,12 +82,18 @@ map <c-j> <c-w>j    " move down
 map <c-k> <c-w>k    " move up
 map <c-l> <c-w>l    " move right
 
+" Check PHP syntax
+map <silent> <Leader>vv :!php -l %<CR>
+
 " NERDTree
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['cache', '\.swp$']
 let NERDTreeMinimalUI=1
-map <c-n> :NERDTreeToggle<CR>
-map <c-m> :NERDTreeFind<CR>
+noremap <c-n> :NERDTreeToggle<CR>
+noremap <c-m> :NERDTreeFind<CR>
+
+" Return clears the last search
+nnoremap <CR> :noh<CR>
 
 " CtrlP (a fuzzy finder)
 let g:ctrlp_map='<Leader>f'
@@ -96,9 +102,4 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Pathogen
 call pathogen#infect()
-
-" Open NERDTree by default, if we have NERDTree
-if exists(':NERDTree') 
-    NERDTreeToggle
-endif
 
