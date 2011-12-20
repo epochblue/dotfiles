@@ -29,7 +29,7 @@ set shiftwidth=4
 set expandtab
 
 " status line
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\
+set stl=%f\ %m\ %r\ line\ %l\ of\ %L\ [%p%%],\ column\ %c%=Type:%y
 set laststatus=2
 
 " ui settings
@@ -66,20 +66,17 @@ let mapleader = ","
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
-" Faster buffer-switching
-nmap <silent> <Leader>, :bp<CR>
-nmap <silent> <Leader>. :bn<CR>
-nmap <silent> <Leader>/ :b#<CR>
-nmap <silent> <Leader>q <c-w>q 
+" Faster tab-switching
+nmap <silent> <Leader>T :tabnew<CR>
+nmap <silent> <Leader>q :tabc<CR>
+nmap <silent> <Leader>, :tabp<CR>
+nmap <silent> <Leader>. :tabn<CR>
 
 " Saner window management
 map <c-h> <c-w>h    " move left
 map <c-j> <c-w>j    " move down
 map <c-k> <c-w>k    " move up
 map <c-l> <c-w>l    " move right
-
-" Check PHP syntax
-map <silent> <Leader>vv :!php -l %<CR>
 
 " NERDTree
 let NERDTreeWinSize=40
