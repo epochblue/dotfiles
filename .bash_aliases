@@ -47,5 +47,9 @@ function ..() {
 # create directories and cd to the first one
 function mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
 
+# simpler find
+function f() { find . -iname "*$1*"; }
+
 # symfony find
-function sf() { find . -iname "$1" | grep -v "cache"; }
+function syf() { find . -iname "$1" | grep -v "cache"; }
+
