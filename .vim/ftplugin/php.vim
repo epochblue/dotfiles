@@ -6,5 +6,5 @@ map <silent> <Leader>vv :!php -l %<CR>
 
 
 " Align
-map <c-[> vi(:Align=><CR>
+map <silent> <Leader>va vi(:Align=><CR>
 
