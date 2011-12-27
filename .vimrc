@@ -40,6 +40,7 @@ set showmatch
 set nowrap
 syntax on
 
+" relative line numbering
 if exists('&relativenumber')
   set relativenumber
 endif
@@ -82,11 +83,33 @@ map <c-l> <c-w>l    " move right
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['cache', '\.swp$']
 let NERDTreeMinimalUI=1
-noremap <c-n> :NERDTreeToggle<CR>
-noremap <c-m> :NERDTreeFind<CR>
+nnoremap <c-n> :NERDTreeToggle<CR>
+nnoremap <c-m> :NERDTreeFind<CR>
 
 " Return clears the last search
 nnoremap <CR> :noh<CR>
+
+" Toggle between relative and non-relative line numbers
+function! g:ToggleNumberMode()
+    if (&relativenumber)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <silent> <Leader>l :call g:ToggleNumberMode()<CR>
+
+" Turn off line numbers
+function! g:ToggleNumbers()
+    if (&relativenumber)
+        set relativenumber!
+    else
+        set number!
+    endif
+endfunc
+
+nnoremap <c-l> :call g:ToggleNumbers()<CR>
 
 " CtrlP (a fuzzy finder)
 let g:ctrlp_map='<Leader>f'
