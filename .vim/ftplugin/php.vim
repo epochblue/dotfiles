@@ -2,9 +2,12 @@
 " Bill Israel <bill.israel@gmail.com>
 
 " Check syntax
-map <silent> <Leader>vv :!php -l %<CR>
-
+nnoremap <silent> <Leader>vv :!php -l %<CR>
 
 " Align
-map <silent> <Leader>va vi(:Align=><CR>
+nnoremap <silent> <Leader>va vi(:Align=><CR>
+
+" PHPDoc
+nnoremap <silent> <Leader>vd :call PhpDocSingle()<CR>
+vnoremap <c-p> :call PhpDocRange()<CR>
 

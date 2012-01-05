@@ -32,7 +32,7 @@ set expandtab
 set stl=%f\ %m\ %r\ line\ %l\ of\ %L\ [%p%%],\ column\ %c%=Type:%y
 set laststatus=2
 
-" ui settings
+" baseline ui settings
 colorscheme desert
 set cmdheight=2
 set ruler
@@ -45,6 +45,7 @@ if exists('&relativenumber')
   set relativenumber
 endif
 
+" gui settings
 if has('gui_running')
   colorscheme darkblue
   set lines=100
@@ -84,7 +85,6 @@ let NERDTreeWinSize=40
 let NERDTreeIgnore=['cache', '\.swp$']
 let NERDTreeMinimalUI=1
 nnoremap <c-n> :NERDTreeToggle<CR>
-nnoremap <c-m> :NERDTreeFind<CR>
 
 " Return clears the last search
 nnoremap <CR> :noh<CR>
@@ -98,7 +98,7 @@ function! g:ToggleNumberMode()
     endif
 endfunc
 
-nnoremap <silent> <Leader>l :call g:ToggleNumberMode()<CR>
+nnoremap <silent> <Leader>ln :call g:ToggleNumberMode()<CR>
 
 " Turn off line numbers
 function! g:ToggleNumbers()
@@ -109,7 +109,7 @@ function! g:ToggleNumbers()
     endif
 endfunc
 
-nnoremap <c-l> :call g:ToggleNumbers()<CR>
+nnoremap <silent> <Leader>ll :call g:ToggleNumbers()<CR>
 
 " CtrlP (a fuzzy finder)
 let g:ctrlp_map='<Leader>f'

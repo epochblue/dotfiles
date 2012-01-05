@@ -3,34 +3,30 @@
 
 # ls
 alias ls="ls -G"
+alias l="ls"
 alias ll="ls -hl"
 alias la="ls -Ahl"
 alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
 # hg
-alias hy="hg pull"
-alias hp="hg push"
+alias hpl="hg pull"
+alias hpu="hg push"
 alias hup="hg update"
-alias hupg="hg upgrade"
+alias hug="hg upgrade"
 alias hc="hg commit"
 alias hlog="hg log"
 alias hst="hg status"
 alias hin="hg incoming"
 
 # git
-alias gs="git status"
-alias gf="git fetch"
+alias gst="git status"
 alias gfo="git fetch origin"
-alias gp="git pull"
-alias gpo="git pull origin"
-alias gco="git checkout"
-alias gm="git merge"
 alias gsu="git submodule update --init --recursive"
 
 # etc
-alias dl="curl -O"
 alias src="cd ~/src"
+alias mvim="mvim --remote-tab-silent"
 alias m="mvim"
 alias flushcache="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
