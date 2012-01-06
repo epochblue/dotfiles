@@ -47,12 +47,14 @@ endif
 
 " gui settings
 if has('gui_running')
+  hi CursorLine guibg=#606060
   colorscheme darkblue
   set lines=100
   set columns=200
   set mousehide
   set guioptions=aAce
   set guifont=Inconsolata:h14,Consolas:h13,Monaco:h13
+  set cursorline
 endif
 
 " set shell

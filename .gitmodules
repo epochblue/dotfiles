@@ -1,12 +1,9 @@
-[submodule ".vim/bundle/command-t"]
-	path = .vim/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/surround"]
-	path = .vim/bundle/surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/vim-align"]
+    path = .vim/bundle/vim-align
+    url = git://github.com/tsaleh/vim-align.git

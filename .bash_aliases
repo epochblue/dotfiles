@@ -26,8 +26,8 @@ alias gsu="git submodule update --init --recursive"
 
 # etc
 alias src="cd ~/src"
-alias mvim="mvim --remote-tab-silent"
-alias m="mvim"
+alias mvim="mvim"
+alias m="mvim --remote-tab-silent"
 alias flushcache="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
