@@ -3,9 +3,9 @@
 
 # ls
 alias ls="ls -G"
-alias l="ls"
+alias l="ls -Ahl"
 alias ll="ls -hl"
-alias la="ls -Ahl"
+alias la="l"
 alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
@@ -23,14 +23,15 @@ alias hin="hg incoming"
 alias gst="git status"
 alias gfo="git fetch origin"
 alias gsu="git submodule update --init --recursive"
+alias gc="git commit"
 
 # etc
 alias src="cd ~/src"
-alias mvim="mvim"
 alias m="mvim --remote-tab-silent"
-alias flushcache="sudo dscacheutil -flushcache"
+alias dnsf="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
+alias t="tree"
 
 # `.. 3` will `cd ../../..`
 function ..() {
