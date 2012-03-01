@@ -9,8 +9,10 @@
 set -o vi
 
 # history
+PROMPT_COMMAND='history -a; history -n'
 HISTCONTROL=ignoredups
-HISTSIZE=500
+HISTIGNORE='ls:bg:fg:history'
+HISTSIZE=1000
 shopt -s histappend
 shopt -s cmdhist
 
