@@ -41,6 +41,21 @@ function ..() {
     cd $dir >& /dev/null;
 }
 
+# generate a random password
+function gpw() {
+    local length=$1
+    [ -z "$length" ] && length=20
+    case `uname` in
+        Darwin)
+            LC_CTYPE=C tr -dc "A-Za-z0-9&^%$#@" < /dev/urandom | head -c ${length} | xargs
+            ;;
+
+        *)
+            tr -dc "A-Za-z0-9&^%$#@" < /dev/urandom | head -c ${length} | xargs
+            ;;
+    esac
+}
+
 # create directories and cd to the first one
 function mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
 
