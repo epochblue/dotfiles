@@ -65,16 +65,19 @@ endif
 " Remap the leader key
 let mapleader = ","
 
+" Don't lose the 'reverse search direction' command
+nnoremap <Leader>, ,
+
 " edit and source the vimrc file
 " (via Derek Wyatt)
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
 " Faster tab-switching
-nmap <silent> <Leader>T :tabnew<CR>
+nmap <silent> <Leader>t :tabnew<CR>
 nmap <silent> <Leader>q :tabc<CR>
-nmap <silent> <Leader>, :tabp<CR>
-nmap <silent> <Leader>. :tabn<CR>
+nmap <silent> <Leader>< :tabp<CR>
+nmap <silent> <Leader>> :tabn<CR>
 
 " Saner window management
 map <c-h> <c-w>h    " move left
