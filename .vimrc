@@ -35,7 +35,6 @@ set laststatus=2
 " baseline ui settings
 " default non-gui colorscheme = desert, but prefer solarized
 colorscheme desert
-silent! colorscheme solarized
 set background=dark
 set cmdheight=2
 set ruler
@@ -53,7 +52,6 @@ if has('gui_running')
   hi CursorLine guibg=#606060
   " default colorscheme = darkblue, but prefer solarized
   colorscheme darkblue
-  silent! colorscheme solarized
   set lines=100
   set columns=120
   set mousehide
@@ -84,7 +82,7 @@ nmap <silent> <Leader>q :tabc<CR>
 nmap <silent> <Leader>< :tabp<CR>
 nmap <silent> <Leader>> :tabn<CR>
 
-" Saner window management
+" Saner split-view management
 map <c-h> <c-w>h    " move left
 map <c-j> <c-w>j    " move down
 map <c-k> <c-w>k    " move up
@@ -97,7 +95,7 @@ let NERDTreeMinimalUI=1
 nnoremap <c-n> :NERDTreeToggle<CR>
 
 " Return clears the last search
-nnoremap <CR> :noh<CR>
+nnoremap <silent> <CR> :noh<CR>
 
 " Toggle between relative and non-relative line numbers
 function! g:ToggleNumberMode()
@@ -127,5 +125,9 @@ let g:ctrlp_working_path_mode=2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Pathogen
-call pathogen#infect()
+silent! call pathogen#infect()
+
+" These things require Pathogen to have loaded, so load them here
+silent! colorscheme solarized
+call togglebg#map("<Leader>b")
 
