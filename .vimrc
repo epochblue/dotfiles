@@ -33,7 +33,10 @@ set stl=%f\ %m\ %r\ line\ %l\ of\ %L\ [%p%%],\ column\ %c%=Type:%y
 set laststatus=2
 
 " baseline ui settings
+" default non-gui colorscheme = desert, but prefer solarized
 colorscheme desert
+silent! colorscheme solarized
+set background=dark
 set cmdheight=2
 set ruler
 set showmatch
@@ -48,7 +51,9 @@ endif
 " gui settings
 if has('gui_running')
   hi CursorLine guibg=#606060
+  " default colorscheme = darkblue, but prefer solarized
   colorscheme darkblue
+  silent! colorscheme solarized
   set lines=100
   set columns=120
   set mousehide
