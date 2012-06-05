@@ -1,6 +1,9 @@
 " .vimrc
 " Bill Israel [http://cubicle17.com/]
 
+" Pathogen
+silent! call pathogen#infect()
+
 " general settings
 set nocompatible
 set hidden
@@ -52,6 +55,7 @@ if has('gui_running')
   hi CursorLine guibg=#606060
   " default colorscheme = darkblue, but prefer solarized
   colorscheme darkblue
+  silent! colorscheme solarized
   set lines=100
   set columns=120
   set mousehide
@@ -75,6 +79,9 @@ nnoremap <Leader>, ,
 " (via Derek Wyatt)
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
+
+" Quick toggling between light and dark backgrounds
+call togglebg#map("<Leader>b")
 
 " Faster tab-switching
 nmap <silent> <Leader>t :tabnew<CR>
@@ -124,10 +131,5 @@ let g:ctrlp_map='<Leader>f'
 let g:ctrlp_working_path_mode=2
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
-" Pathogen
-silent! call pathogen#infect()
 
-" These things require Pathogen to have loaded, so load them here
-silent! colorscheme solarized
-call togglebg#map("<Leader>b")
 
