@@ -9,16 +9,6 @@ alias la="l"
 alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
-# hg
-alias hpl="hg pull"
-alias hpu="hg push"
-alias hup="hg update"
-alias hug="hg upgrade"
-alias hc="hg commit"
-alias hlog="hg log"
-alias hst="hg status"
-alias hin="hg incoming"
-
 # git
 alias gst="git status"
 alias gfo="git fetch origin"
@@ -32,6 +22,7 @@ alias dnsf="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
 alias t="tree"
+alias td="todo.sh -d $HOME/.todo.cfg"
 
 # `.. 3` will `cd ../../..`
 function ..() {
