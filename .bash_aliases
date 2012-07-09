@@ -18,7 +18,7 @@ alias gc="git commit"
 # etc
 alias src="cd ~/src"
 alias m="mvim --remote-tab-silent"
-alias dnsf="sudo dscacheutil -flushcache"
+alias cdns="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
 alias t="tree"
