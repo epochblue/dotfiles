@@ -99,7 +99,7 @@ map <c-l> <c-w>l    " move right
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['cache', '\.swp$']
 let NERDTreeMinimalUI=1
-nnoremap <c-n> :NERDTreeToggle<CR>
+nnoremap <silent> <c-n> :NERDTreeToggle<CR>
 
 " Return clears the last search
 nnoremap <silent> <CR> :noh<CR>
