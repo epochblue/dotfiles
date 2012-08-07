@@ -13,6 +13,7 @@ set vb
 set wildmenu
 set showcmd
 set backspace=indent,eol,start
+set noswapfile
 filetype plugin indent on
 scriptencoding utf8
 fixdel
