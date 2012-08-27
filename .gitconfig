@@ -12,6 +12,7 @@
 [alias]
     st = status
     co = checkout
+     d = diff
 
 [apply]
     whitespace = nowarn
