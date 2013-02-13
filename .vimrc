@@ -60,7 +60,7 @@ if has('gui_running')
   set lines=100
   set columns=120
   set mousehide
-  set guioptions=aAce
+  set guioptions=Ace
   set guifont=Inconsolata:h14,Consolas:h13,Monaco:h13
   set cursorline
 endif
