@@ -4,6 +4,3 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-align"]
-    path = .vim/bundle/vim-align
-    url = git://github.com/tsaleh/vim-align.git
