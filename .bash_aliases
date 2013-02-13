@@ -22,7 +22,6 @@ alias cdns="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
 alias t="tree"
-alias td="todo.sh -d $HOME/.todo.cfg"
 
 # `.. 3` will `cd ../../..`
 function ..() {
