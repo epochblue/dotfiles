@@ -27,8 +27,12 @@ export COPYFILE_DISABLE=true
 
 
 # if we have git completion, use a git-aware prompt
-if [ -f /usr/local/bin/git-completion.bash ]; then
-	. /usr/local/bin/git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+	source /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+	source /usr/local/etc/bash_completion.d/git-prompt.sh
 	PS1='\w $(__git_ps1 "(%s) ")\$ '
 else
 	# use a super-minimal prompt by default
