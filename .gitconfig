@@ -10,8 +10,12 @@
     diff = auto
 
 [alias]
-    st = status
+    st = status -sb
     co = checkout
+    ds = diff --staged
+    undo = reset --soft HEAD^
+    ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
+    graph = graph = log --graph --pretty=format":%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"
 
 [apply]
     whitespace = nowarn
