@@ -22,6 +22,7 @@ alias cdns="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
 alias t="tree"
+alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 
 # `.. 3` will `cd ../../..`
 function ..() {
@@ -51,7 +52,4 @@ function mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
 
 # simpler find
 function f() { find . -iname "*$1*"; }
-
-# symfony find
-function syf() { find . -iname "$1" | grep -v "cache"; }
 
