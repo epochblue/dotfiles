@@ -27,17 +27,23 @@ export COPYFILE_DISABLE=true
 
 
 # if we have git completion, use a git-aware prompt
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	source /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -d /usr/local/etc/bash_completion.d ]; then
+    for file in git-completion.bash git-prompt.sh scala
+    do
+        if [ -f /usr/local/etc/bash_completion.d/$file ]; then
+            source /usr/local/etc/bash_completion.d/$file
+        fi
+    done
 fi
 
+
+# Default prompt
+PS1='\w \$ '
+
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-	source /usr/local/etc/bash_completion.d/git-prompt.sh
 	PS1='\w $(__git_ps1 "(%s) ")\$ '
-else
-	# use a super-minimal prompt by default
-	PS1='\w \$ '
 fi
+
 
 # ls colors
 # (via http://github.com/inky/dotfiles/blob/master/home/.bashrc)
