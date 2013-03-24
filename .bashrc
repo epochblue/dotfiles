@@ -25,21 +25,15 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:usr/X11/bin"
 export COPYFILE_DISABLE=true
 
-
-# if we have git completion, use a git-aware prompt
-if [ -d /usr/local/etc/bash_completion.d ]; then
-    for file in git-completion.bash git-prompt.sh scala
-    do
-        if [ -f /usr/local/etc/bash_completion.d/$file ]; then
-            source /usr/local/etc/bash_completion.d/$file
-        fi
-    done
+# Load Homebrew's bash-completion helpers
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
-
 
 # Default prompt
 PS1='\w \$ '
 
+# Use a git-aware prompt if one is available
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
 	PS1='\w $(__git_ps1 "(%s) ")\$ '
 fi
