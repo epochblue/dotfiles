@@ -16,3 +16,13 @@
 
 [apply]
     whitespace = nowarn
+
+[push]
+	default = tracking
+
+[pull]
+	rebase = true
+
+[branch]
+	autosetuprebase = always
+
