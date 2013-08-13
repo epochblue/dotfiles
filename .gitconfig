@@ -13,6 +13,9 @@
     ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
     st = status -sb
     undo = reset --soft HEAD^
+    ignore = !git update-index --assume-unchanged
+    unignore = !git update-index --no-assume-unchanged
+    ignored = !git ls-files -v | grep ^[a-z]
 
 [apply]
     whitespace = nowarn
