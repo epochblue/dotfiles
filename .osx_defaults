@@ -273,9 +273,6 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
-# Hide the /opt
-chflags hidden /opt
-
 # Remove Dropbox’s green checkmark icons in Finder
 #file=/Applications/Dropbox.app/Contents/Resources/check.icns
 #[ -e "$file" ] && mv -f "$file" "$file.bak"
