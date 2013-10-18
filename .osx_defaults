@@ -333,10 +333,10 @@ defaults write com.apple.dock pinning -string "end"
 defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Dashboard Hot Corners
-defaults write com.apple.dashboard wvous-br-corner -int 4
-defaults write com.apple.dashboard wvous-br-modifier -int 0
-defaults write com.apple.dashboard wvous-tr-corner -int 5
-defaults write com.apple.dashboard wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 4
+defaults write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 5
+defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
@@ -437,8 +437,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Use a modified version of the Pro theme by default in Terminal.app
 open "$HOME/src/dotfiles/misc/epochblue.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "Mathias"
-defaults write com.apple.terminal "Startup Window Settings" -string "Mathias"
+defaults write com.apple.terminal "Default Window Settings" -string "epochblue"
+defaults write com.apple.terminal "Startup Window Settings" -string "epochblue"
 
 ###############################################################################
 # Time Machine                                                                #
