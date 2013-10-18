@@ -20,6 +20,9 @@ sudo scutil --set HostName "$name"
 sudo scutil --set LocalHostName "$name"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$user"
 
+# UI: Use the Graphite theme
+defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+
 # Menu bar: disable transparency
 # defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
