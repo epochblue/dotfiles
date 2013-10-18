@@ -439,6 +439,9 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Use the environment's shell by default
+defaults write com.apple.terminal Shell -string "/usr/bin/env bash"
+
 # Use a modified version of the Pro theme by default in Terminal.app
 open "$HOME/src/dotfiles/misc/epochblue.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
