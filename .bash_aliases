@@ -24,7 +24,8 @@ alias reload="source ~/.bashrc"
 alias t="tree"
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 alias utime="date +%s"
-alias serve="python -mSimpleHTTPServer"
+alias py="python"
+alias serve="py -mSimpleHTTPServer"
 
 # `.. 3` will `cd ../../..`
 function ..() {
