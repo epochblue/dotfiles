@@ -4,12 +4,12 @@
 git submodule update --init --recursive
 
 # Start with the simple dotfiles
-dotfiles=( .bashrc .bash_aliases .gemrc .vim/ .vimrc .inputrc .gitconfig .osx_defaults )
+dotfiles=( .bashrc .bash_aliases .gemrc .vim .vimrc .inputrc .gitconfig .osx_defaults .todo.cfg )
 for i in "${dotfiles[@]}"
 do
     if [ ! -e ~/$i ]; then 
         echo "Creating ~/$i -> $(pwd)/$i"
-        ln -s $(pwd)/$i ~/$i
+        ln -s $(pwd)/$i $HOME/$i
     else
         echo "~/$i already exists; skipping."
     fi
