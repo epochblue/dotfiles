@@ -491,6 +491,12 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
+# Set PowerManagement options for AC power
+sudo pmset -c sleep 0 disksleep 0 displaysleep 5
+
+# Set PowerManagement options for batter power
+sudo pmset -b sleep 1 disksleep 0 displaysleep 2
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################

@@ -9,12 +9,9 @@ servers = (
   }
 );
 
-chatnets = {
-    Freenode = { type = "IRC"; nick = "cubicle17"; };
-};
+chatnets = { Freenode = { type = "IRC"; nick = "cubicle17"; }; };
 
 channels = (
-  { name = "#iostudio-vip"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#nashvillephp"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#pynash"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#nashjs"; chatnet = "Freenode"; autojoin = "yes"; },
@@ -162,7 +159,7 @@ settings = {
 
   "fe-common/core" = { window_history = "no"; theme = "ash"; };
 
-  "irc/core" = { alternate_nick = "cubicle17_"; };
+  "irc/core" = { alternate_nick = "_cubicle17"; };
 };
 
 ignores = { level = "JOINS PARTS NICKS QUITS"; };

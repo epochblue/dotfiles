@@ -15,6 +15,11 @@ alias gfo="git fetch origin"
 alias gsu="git submodule update --init --recursive"
 alias gc="git commit"
 
+# python
+alias py="python"
+alias serve="py -mSimpleHTTPServer"
+alias wo="workon"
+
 # etc
 alias src="cd ~/src"
 alias m="mvim --remote-tab-silent"
@@ -22,15 +27,15 @@ alias cdns="sudo dscacheutil -flushcache"
 alias diff="diff --suppress-common-lines"
 alias reload="source ~/.bashrc"
 alias t="tree"
+alias tl="tree -L"
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 alias utime="date +%s"
-alias py="python"
-alias serve="py -mSimpleHTTPServer"
 
 # `.. 3` will `cd ../../..`
 function ..() {
-    local arg=${1:-1}; while [ $arg -gt 0 ]; do
-        local dir="$dir../"; arg=$(($arg - 1))
+    local dir=""
+    local arg=${1:-1}; while [ "$arg" -gt 0 ]; do
+        dir="$dir../"; arg=$(($arg - 1))
     done
     cd $dir >& /dev/null;
 }
@@ -51,8 +56,11 @@ function gpw() {
 }
 
 # create directories and cd to the first one
-function mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
+mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
 
 # simpler find
-function f() { find . -iname "*$1*"; }
+f() { find . -iname "*$1*"; }
+
+# repeat a command
+repeat() { n=$1; shift; while [ $(( n -= 1 )) -ge 0 ]; do "$@"; done; }
 
