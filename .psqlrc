@@ -1,0 +1,18 @@
+\set QUIET 1
+\timing
+\set ON_ERROR_ROLLBACK interactive
+\set VERBOSITY verbose
+\set COMP_KEYWORD_CASE upper
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
+
+\set PROMPT1 '%n#%/ %R '
+\set PROMPT2 '%R '
+
+\pset pager off
+\pset null '(null)'
+\pset border 3
+\pset linestyle unicode
+
+\x auto
+\unset QUIET
