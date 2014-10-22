@@ -15,7 +15,8 @@ channels = (
   { name = "#nashvillephp"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#pynash"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#nashjs"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#icymi"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#icymi"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#pynash-org"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
