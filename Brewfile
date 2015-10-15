@@ -1,4 +1,4 @@
-tap phinze/cask
+tap caskroom/cask/brew-cask
 tap homebrew/versions
 
 install ack
@@ -7,8 +7,12 @@ install brew-cask
 install git
 install heroku-toolbelt
 install hub
+install postgresql
 install python
 install python3
+install redis
+install s3cmd
+install sqlite
 install todo-txt
 install tree
 
