@@ -1,9 +1,6 @@
 " .vimrc
 " Bill Israel [http://cubicle17.com/]
 
-" Pathogen
-silent! call pathogen#infect()
-
 " general settings
 set nocompatible
 set hidden
@@ -81,9 +78,6 @@ nnoremap <Leader>, ,
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR>
 
-" Quick toggling between light and dark backgrounds
-call togglebg#map("<Leader>b")
-
 " Faster tab-switching
 nmap <silent> <Leader>t :tabnew<CR>
 nmap <silent> <Leader>q :tabc<CR>
@@ -95,12 +89,6 @@ map <c-h> <c-w>h    " move left
 map <c-j> <c-w>j    " move down
 map <c-k> <c-w>k    " move up
 map <c-l> <c-w>l    " move right
-
-" NERDTree
-let NERDTreeWinSize=40
-let NERDTreeIgnore=['cache', '\.swp$']
-let NERDTreeMinimalUI=1
-nnoremap <silent> <c-n> :NERDTreeToggle<CR>
 
 " Return clears the last search
 nnoremap <silent> <CR> :noh<CR>
@@ -126,11 +114,6 @@ function! g:ToggleNumbers()
 endfunc
 
 nnoremap <silent> <Leader>ll :call g:ToggleNumbers()<CR>
-
-" CtrlP (a fuzzy finder)
-let g:ctrlp_map='<Leader>f'
-let g:ctrlp_working_path_mode=2
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Move by row, not by line (with reverse mappings)
 nnoremap j gj
