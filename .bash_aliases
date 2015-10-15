@@ -17,7 +17,6 @@ alias gc="git commit"
 
 # python
 alias py="python"
-alias serve="py -mSimpleHTTPServer"
 alias wo="workon"
 
 # etc
