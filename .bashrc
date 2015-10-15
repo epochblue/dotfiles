@@ -31,11 +31,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # Default prompt
-PS1='\w \$ '
+PS1='👻  \w \$ '
 
 # Use a git-aware prompt if one is available
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-	PS1='\w $(__git_ps1 "(%s) ")\$ '
+	PS1='👻  \w $(__git_ps1 "(%s) ")\$ '
 fi
 
 
