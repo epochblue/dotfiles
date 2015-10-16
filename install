@@ -13,9 +13,9 @@ do
 done
 
 # Create an env-specific file, just in case
-if [ ! -f ~/.bashrc.local ]; then
+if [ ! -f ~/.bashrc_local ]; then
   echo "Creating env-specific .bashrc file."
-  echo "# Put environment-specific stuff here." > ~/.bashrc.local
+  echo "# Put environment-specific stuff here." > ~/.bashrc_local
 fi
 
 source ~/.bashrc

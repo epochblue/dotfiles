@@ -63,6 +63,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Include environment-specific odds-n-ends
-if [ -f ~/.bashrc.local ]; then
-  . ~/.bashrc.local
+if [ -f ~/.bashrc_local ]; then
+  . ~/.bashrc_local
 fi
