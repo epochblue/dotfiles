@@ -19,7 +19,6 @@ install tree
 cask install adium
 cask install airfoil
 cask install appzapper
-cask install atom
 cask install bartender
 cask install dropbox
 cask install firefox
