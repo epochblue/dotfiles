@@ -1,9 +1,8 @@
-tap caskroom/cask/brew-cask
 tap homebrew/versions
 
 install ack
 install bash-completion
-install brew-cask
+install caskroom/cask/brew-cask
 install git
 install heroku-toolbelt
 install hub
@@ -20,6 +19,7 @@ cask install adium
 cask install airfoil
 cask install appzapper
 cask install bartender
+cask install cocoarestclient
 cask install dropbox
 cask install firefox
 cask install flux
