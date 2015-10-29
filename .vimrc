@@ -29,6 +29,12 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 " status line
 set stl=%f\ %m\ %r\ line\ %l\ of\ %L\ [%p%%],\ column\ %c%=Type:%y
 set laststatus=2
@@ -40,6 +46,7 @@ set cmdheight=2
 set ruler
 set showmatch
 set nowrap
+set number
 syntax on
 
 " relative line numbering
@@ -66,9 +73,18 @@ if has('unix')
   let shell='bash'
 endif
 
-" Move by row, not by line (with reverse mappings)
+" move by row, not by line (with reverse mappings)
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+
+" clear search highlights
+nmap c/ :noh<cr>
+
+"split navigation movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
