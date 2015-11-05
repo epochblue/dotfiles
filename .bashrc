@@ -31,13 +31,45 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 MONTH=$(date +"%m")
-SYMBOL='🐴'
 case $MONTH in
+    01)
+        SYMBOL='🎉'
+        ;;
+    02)
+        SYMBOL='❤️'
+        ;;
+    03)
+        SYMBOL='🍀'
+        ;;
+    04)
+        SYMBOL='🐰'
+        ;;
+    05)
+        SYMBOL='☀️'
+        ;;
+    06)
+        SYMBOL='💍'
+        ;;
+    07)
+        SYMBOL='🇺'
+        ;;
+    08)
+        SYMBOL='🎂'
+        ;;
+    09)
+        SYMBOL='🍂'
+        ;;
     10)
         SYMBOL='👻'
         ;;
     11)
         SYMBOL='🍗'
+        ;;
+    12)
+        SYMBOL='🎄'
+        ;;
+    *)
+        SYMBOL='☕️'
         ;;
 esac
 
@@ -46,7 +78,7 @@ PS1="$SYMBOL  \w \$ "
 
 # Use a git-aware prompt if one is available
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-	PS1='🍗  \w $(__git_ps1 "(%s) ")\$ '
+	PS1=$"$SYMBOL  \w $(__git_ps1 "(%s) ")\$ "
 fi
 
 
