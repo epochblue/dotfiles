@@ -31,8 +31,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 MONTH=$(date +"%m")
-echo $MONTH
-SYMBOL='💃'
+SYMBOL='🐴'
 case $MONTH in
     10)
         SYMBOL='👻'
