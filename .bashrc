@@ -30,8 +30,20 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+MONTH=$(date +"%m")
+echo $MONTH
+SYMBOL='💃'
+case $MONTH in
+    10)
+        SYMBOL='👻'
+        ;;
+    11)
+        SYMBOL='🍗'
+        ;;
+esac
+
 # Default prompt
-PS1='🍗  \w \$ '
+PS1="$SYMBOL  \w \$ "
 
 # Use a git-aware prompt if one is available
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
