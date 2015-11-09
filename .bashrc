@@ -25,6 +25,17 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:usr/X11/bin"
 export COPYFILE_DISABLE=true
 
+
+# virtualenv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+set_active_venv() {
+    export ACTIVE_VENV=""
+    if [ "$VIRTUAL_ENV" != "" ]; then
+        export ACTIVE_VENV="(`basename \"$VIRTUAL_ENV\"`)"
+    fi
+}
+
 # Load Homebrew's bash-completion helpers
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -74,13 +85,12 @@ case $MONTH in
 esac
 
 # Default prompt
-PS1="$SYMBOL  \w \$ "
+export PS1="${SYMBOL}  \w \$ "
 
 # Use a git-aware prompt if one is available
 if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-	PS1=$"$SYMBOL  \w $(__git_ps1 "(%s) ")\$ "
+    export PROMPT_COMMAND='set_active_venv; __git_ps1 "${ACTIVE_VENV}${SYMBOL}  \w" " \\\$ "'
 fi
-
 
 # ls colors
 # (via http://github.com/inky/dotfiles/blob/master/home/.bashrc)
@@ -109,3 +119,4 @@ fi
 if [ -f ~/.bashrc_local ]; then
   . ~/.bashrc_local
 fi
+
