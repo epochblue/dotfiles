@@ -1,42 +1,42 @@
-tap homebrew/versions
+tap 'homebrew/versions'
 
-install ack
-install bash-completion
-install caskroom/cask/brew-cask
-install git
-install heroku-toolbelt
-install hub
-install postgresql
-install python
-install python3
-install redis
-install s3cmd
-install sqlite
-install todo-txt
-install tree
+brew 'ack'
+brew 'bash-completion'
+brew 'caskroom/cask/brew-cask'
+brew 'git'
+brew 'heroku-toolbelt'
+brew 'hub'
+brew 'postgresql'
+brew 'python'
+brew 'python3'
+brew 'redis'
+brew 's3cmd'
+brew 'sqlite'
+brew 'todo-txt'
+brew 'tree'
 
-cask install adium
-cask install airfoil
-cask install appzapper
-cask install bartender
-cask install cocoarestclient
-cask install dropbox
-cask install firefox
-cask install flux
-cask install google-chrom
-cask install intellij-idea
-cask install keepassx
-cask install launchbar
-cask install macvim
-cask install nvalt
-cask install openemu
-cask install postico
-cask install rdio
-cask install slack
-cask install sonos
-cask install soulver
-cask install superduper
-cask install the-unarchiver
-cask install transmission
-cask install transmit
+cask 'adium'
+cask 'airfoil'
+cask 'appzapper'
+cask 'bartender'
+cask 'cocoarestclient'
+cask 'dropbox'
+cask 'firefox'
+cask 'flux'
+cask 'google-chrom'
+cask 'intellij-idea'
+cask 'keepassx'
+cask 'launchbar'
+cask 'macvim'
+cask 'nvalt'
+cask 'openemu'
+cask 'postico'
+cask 'rdio'
+cask 'slack'
+cask 'sonos'
+cask 'soulver'
+cask 'superduper'
+cask 'the-unarchiver'
+cask 'transmission'
+cask 'transmit'
 
