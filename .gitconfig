@@ -6,33 +6,35 @@
     diff = auto
 
 [alias]
+    aa = add --all
     co = checkout
+    ci = commit --verbose
     df = diff
     ds = diff --staged
+    dc = diff --cached
     f = fetch --prune
+    pullff = pull --ff-only
     graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-    ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+    ls = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s %C(blue)(%ar) %C(green)<%cn>' --decorate --date=short
+    lsd = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s %C(green)<%cn>' --decorate --date=short
     st = status -sb
     undo = reset --soft HEAD^
     n = "!sh -c 'git ls -n \"$1\"' -"
     unstage = reset HEAD --
-    ignore = !git update-index --assume-unchanged
-    unignore = !git update-index --no-assume-unchanged
-    ignored = !git ls-files -v | grep ^[a-z]
 
 [apply]
     whitespace = nowarn
 
 [push]
-	default = tracking
+    default = tracking
 
 [pull]
-	rebase = true
+    rebase = true
 
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
