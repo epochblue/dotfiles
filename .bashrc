@@ -63,7 +63,7 @@ case $MONTH in
         SYMBOL='💍'
         ;;
     07)
-        SYMBOL='🇺'
+        SYMBOL='🎇'
         ;;
     08)
         SYMBOL='🎂'
