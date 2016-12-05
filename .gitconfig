@@ -6,6 +6,15 @@
     diff = auto
 
 [alias]
+    branches = branch -a
+    tags = tag
+    stashes = stash list
+    unstage = reset -q HEAD --
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
+    precommit = diff --cached --diff-algorithm=minimal -w
+    amend = commit --amend
+    fuck-it = !git reset --hard HEAD && git clean -df
     aa = add --all
     co = checkout
     ci = commit --verbose
@@ -14,13 +23,12 @@
     dc = diff --cached
     f = fetch --prune
     pullff = pull --ff-only
-    graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
     ls = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s %C(blue)(%ar) %C(green)<%cn>' --decorate --date=short
     lsd = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s %C(green)<%cn>' --decorate --date=short
     st = status -sb
     undo = reset --soft HEAD^
     n = "!sh -c 'git ls -n \"$1\"' -"
-    unstage = reset HEAD --
 
 [apply]
     whitespace = nowarn
