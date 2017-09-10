@@ -10,6 +10,7 @@ alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
 # git
+alias git="hub"
 alias gst="git status"
 alias gfo="git fetch origin"
 alias gsu="git submodule update --init --recursive"
@@ -18,20 +19,24 @@ alias gc="git commit"
 # python
 alias py="python"
 alias wo="workon"
+alias rmpyc='find . -name "*.pyc" -exec rm {} \;'
+alias zen='python -c "import this;"'
 
 # etc
-alias src="cd ~/src"
-alias m="mvim --remote-tab-silent"
-alias cdns="sudo dscacheutil -flushcache"
+alias cdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 alias diff="diff --suppress-common-lines"
+alias m="mvim --remote-tab-silent"
 alias rbash="source ~/.bashrc"
+alias src="cd ~/src"
 alias t="tree"
 alias tl="tree -L"
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 alias utime="date +%s"
+alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
+alias weather='curl "wttr.in?q&0"'
 
 # `.. 3` will `cd ../../..`
-function ..() {
+..() {
     local dir=""
     local arg=${1:-1}; while [ "$arg" -gt 0 ]; do
         dir="$dir../"; arg=$(($arg - 1))
@@ -40,7 +45,7 @@ function ..() {
 }
 
 # generate a random password
-function gpw() {
+gpw() {
     local length=$1
     [ -z "$length" ] && length=20
     case `uname` in
@@ -67,4 +72,20 @@ repeat() { n=$1; shift; while [ $(( n -= 1 )) -ge 0 ]; do "$@"; done; }
 ytdl() {
     local url=$1
     youtube-dl --add-metadata --audio-format=mp3 --write-all-thumbnails -f 'bestaudio[ext=m4a]' -o '%(title)s.%(ext)s' "$url"
+}
+
+# run the given file through github's markdown parser
+ghmarkdown() {
+    in=$1
+    if [ -z "$in" ]; then
+        echo "Error: input file required."
+        exit 1
+    fi
+
+    out=$2
+    if [ -z "$out" ]; then
+        out="$HOME/Desktop/markdown.html"
+    fi
+
+    jq --slurp --raw-input '{"text": "\(.)", "mode": "markdown"}' < "$in" | curl -s --data @- https://api.github.com/markdown > $out
 }
