@@ -1,0 +1,67 @@
+# virtualenv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+set_active_venv() {
+    export ACTIVE_VENV=""
+    if [ "$VIRTUAL_ENV" != "" ]; then
+        export ACTIVE_VENV="(`basename \"$VIRTUAL_ENV\"`)"
+    fi
+}
+
+MONTH=$(date +"%m")
+case $MONTH in
+    01)
+        SYMBOL='🎉'
+        ;;
+    02)
+        SYMBOL='❤️'
+        ;;
+    03)
+        SYMBOL='🍀'
+        ;;
+    04)
+        SYMBOL='🐰'
+        ;;
+    05)
+        SYMBOL='☀️'
+        ;;
+    06)
+        SYMBOL='💍'
+        ;;
+    07)
+        SYMBOL='🎇'
+        ;;
+    08)
+        SYMBOL='🎂'
+        ;;
+    09)
+        SYMBOL='🍂'
+        ;;
+    10)
+        SYMBOL='👻'
+        ;;
+    11)
+        SYMBOL='🍗'
+        ;;
+    12)
+        SYMBOL='🎄'
+        ;;
+    *)
+        SYMBOL='☕️'
+        ;;
+esac
+
+# Make the git prompt smarter
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWCOLORHINTS=1
+
+# Default prompt
+export PROMPT_COMMAND="$PROMPT_COMMAND; set_active_venv"
+export PS1="${SYMBOL}  \w \$ "
+
+# Use a git-aware prompt if one is available
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+    export PS1='${ACTIVE_VENV}${SYMBOL}  \w$(__git_ps1) \$ '
+fi
+
