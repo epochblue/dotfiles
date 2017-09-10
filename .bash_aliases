@@ -63,3 +63,8 @@ f() { find . -iname "*$1*"; }
 # repeat a command
 repeat() { n=$1; shift; while [ $(( n -= 1 )) -ge 0 ]; do "$@"; done; }
 
+# download the audio track from youtube (requires youtube-dl and ffmpeg/avconv)
+ytdl() {
+    local url=$1
+    youtube-dl --add-metadata --audio-format=mp3 --write-all-thumbnails -f 'bestaudio[ext=m4a]' -o '%(title)s.%(ext)s' "$url"
+}
