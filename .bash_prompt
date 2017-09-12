@@ -17,6 +17,7 @@ set_active_venv() {
     fi
 }
 
+# per-month emoji
 MONTH=$(date +"%m")
 case $MONTH in
     01)
@@ -60,17 +61,15 @@ case $MONTH in
         ;;
 esac
 
-# Make the git prompt smarter
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWCOLORHINTS=1
+# make the git prompt smarter
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWCOLORHINTS=1
 
-# Default prompt
-export PROMPT_COMMAND="$PROMPT_COMMAND; set_active_venv"
-export PS1="${SYMBOL}  \w \$ "
+set_prompt() {
+    set_active_venv
+    PS1="${ACTIVE_VENV}${SYMBOL}  \w$(__git_ps1) \\\$ "
+}
 
-# Use a git-aware prompt if one is available
-if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-    export PS1='${ACTIVE_VENV}${SYMBOL}  \w$(__git_ps1) \$ '
-fi
+PROMPT_COMMAND=set_prompt
 
