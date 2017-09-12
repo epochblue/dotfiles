@@ -4,6 +4,7 @@
 
 [color]
     diff = auto
+    ui = auto
 
 [alias]
     branches = branch -a
