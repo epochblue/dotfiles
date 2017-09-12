@@ -33,7 +33,7 @@ alias tl="tree -L"
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 alias utime="date +%s"
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
-alias weather='curl "wttr.in?q&0"'
+alias weather='curl "wttr.in?Q&0"'
 
 # `.. 3` will `cd ../../..`
 ..() {
