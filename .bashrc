@@ -11,6 +11,7 @@ set -o vi
 # etc
 shopt -s checkwinsize
 
+export CLICOLOR=1
 export EDITOR="vim"
 export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:usr/X11/bin"
 export COPYFILE_DISABLE=1
