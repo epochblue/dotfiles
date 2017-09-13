@@ -64,11 +64,10 @@ esac
 # make the git prompt smarter
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWCOLORHINTS=1
 
 set_prompt() {
     set_active_venv
-    PS1="${ACTIVE_VENV}${SYMBOL}  \w$(__git_ps1) \\\$ "
+    PS1="${SYMBOL} ${YLW}${ACTIVE_VENV} ${WHT}\w ${GRN}$(__git_ps1 "(%s)")${WHT}${CLR} \$ "
 }
 
 PROMPT_COMMAND=set_prompt
