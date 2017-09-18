@@ -3,7 +3,7 @@
 
 # return if not running interactively
 [ -z "$PS1" ] && return
-. /etc/profile > /dev/null
+source /etc/profile > /dev/null
 
 # behave like vi
 set -o vi
@@ -18,7 +18,7 @@ export COPYFILE_DISABLE=1
 
 # Load Homebrew's bash-completion helpers
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+    source $(brew --prefix)/etc/bash_completion
 fi
 
 # Include related files, if they exist
