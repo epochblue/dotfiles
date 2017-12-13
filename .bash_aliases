@@ -11,10 +11,6 @@ alias tree="tree --charset=NULL"
 
 # git
 alias git="hub"
-alias gst="git status"
-alias gfo="git fetch origin"
-alias gsu="git submodule update --init --recursive"
-alias gc="git commit"
 
 # python
 alias py="python"
