@@ -24,7 +24,7 @@ case $MONTH in
         SYMBOL='🎉'
         ;;
     02)
-        SYMBOL='❤️'
+        SYMBOL='💘'
         ;;
     03)
         SYMBOL='🍀'
