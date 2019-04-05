@@ -8,8 +8,8 @@
     "shortcut_name" : "MakeSmaller"
   },
   {
-    "shortcut_key_binding" : "alt+shift+cmd+l",
-    "shortcut_name" : "MoveToLowerRight"
+    "shortcut_key_binding" : null,
+    "shortcut_name" : "MoveToPreviousThird"
   },
   {
     "shortcut_key_binding" : "alt+shift+cmd+k",
@@ -37,11 +37,11 @@
   },
   {
     "shortcut_key_binding" : null,
-    "shortcut_name" : "MoveToPreviousDisplay"
+    "shortcut_name" : "UndoLastMove"
   },
   {
     "shortcut_key_binding" : null,
-    "shortcut_name" : "UndoLastMove"
+    "shortcut_name" : "MoveToPreviousDisplay"
   },
   {
     "shortcut_key_binding" : null,
@@ -56,7 +56,7 @@
     "shortcut_name" : "MoveToLeftHalf"
   },
   {
-    "shortcut_key_binding" : null,
+    "shortcut_key_binding" : "ctrl+alt+cmd+g",
     "shortcut_name" : "MoveToCenter"
   },
   {
@@ -64,11 +64,11 @@
     "shortcut_name" : "MoveToRightHalf"
   },
   {
-    "shortcut_key_binding" : "alt+shift+cmd+h",
-    "shortcut_name" : "MoveToUpperLeft"
+    "shortcut_key_binding" : "alt+shift+cmd+l",
+    "shortcut_name" : "MoveToLowerRight"
   },
   {
-    "shortcut_key_binding" : null,
-    "shortcut_name" : "MoveToPreviousThird"
+    "shortcut_key_binding" : "alt+shift+cmd+h",
+    "shortcut_name" : "MoveToUpperLeft"
   }
 ]
