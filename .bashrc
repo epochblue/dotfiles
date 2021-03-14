@@ -17,9 +17,7 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/s
 export COPYFILE_DISABLE=1
 
 # Load Homebrew's bash-completion helpers
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
-fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Include related files, if they exist
 included_files=( .bash_aliases .bash_colors .bash_prompt .bashrc_local )
