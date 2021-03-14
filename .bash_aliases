@@ -9,9 +9,6 @@ alias la="l"
 alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
-# git
-alias git="hub"
-
 # python
 alias py="python"
 alias wo="workon"
@@ -22,7 +19,7 @@ alias zen='python -c "import this;"'
 alias cdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 alias diff="diff --suppress-common-lines"
 alias m="mvim --remote-tab-silent"
-alias rbash="source ~/.bashrc"
+alias rrc="source ~/.bashrc"
 alias src="cd ~/src"
 alias t="tree"
 alias tl="tree -L"
