@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
-read -p "Install Homebrew? " install_homebrew
 
-if [[ $install_homebrew == [yY] ]]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew bundle
+if ! command -v brew &> /dev/null
+then
+    read -p "Install homebrew? [Y/n] " install_homebrew
+
+    if [[ $install_homebrew == [yY] ]]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
 fi
 
-exit
+if command -v brew &> /dev/null
+then
+    brew bundle
+fi
+
 # Start with the simple dotfiles
-dotfiles=( .bashrc .bash_aliases .bash_colors .bash_profile .bash_prompt .gemrc .vim .vimrc .inputrc .gitconfig .macos .todo.cfg .psqlrc )
+dotfiles=( .bashrc .bash_aliases .bash_colors .bash_profile .bash_prompt .gemrc .vim .vimrc .inputrc .gitconfig .psqlrc )
 for i in "${dotfiles[@]}"
 do
     if [ ! -e ~/$i ]; then 
