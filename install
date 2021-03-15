@@ -3,6 +3,7 @@
 if ! command -v brew &> /dev/null
 then
     read -p "Install homebrew? [Y/n] " install_homebrew
+    install_homebrew=${install_homebrew:-y}
 
     if [[ $install_homebrew == [yY] ]]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
