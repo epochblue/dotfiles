@@ -13,11 +13,11 @@ shopt -s checkwinsize
 
 export CLICOLOR=1
 export EDITOR="vim"
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:usr/X11/bin"
+export PATH="$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:usr/X11/bin"
 export COPYFILE_DISABLE=1
 
 # Load Homebrew's bash-completion helpers
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 # Include related files, if they exist
 included_files=( .bash_aliases .bash_colors .bash_prompt .bashrc_local )
