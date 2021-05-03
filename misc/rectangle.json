@@ -1,0 +1,213 @@
+{
+  "defaults" : {
+    "almostMaximizeWidth" : {
+      "float" : 0
+    },
+    "curtainChangeSize" : {
+      "int" : 0
+    },
+    "allowAnyShortcut" : {
+      "bool" : true
+    },
+    "ignoredSnapAreas" : {
+      "int" : 0
+    },
+    "centerHalfCycles" : {
+      "int" : 0
+    },
+    "screenEdgeGapBottom" : {
+      "float" : 0
+    },
+    "todoMode" : {
+      "bool" : false
+    },
+    "screenEdgeGapTop" : {
+      "float" : 0
+    },
+    "SUEnableAutomaticChecks" : {
+      "bool" : true
+    },
+    "todoSidebarWidth" : {
+      "float" : 400
+    },
+    "gapSize" : {
+      "float" : 1
+    },
+    "disabledApps" : {
+
+    },
+    "todoApplication" : {
+
+    },
+    "centeredDirectionalMove" : {
+      "int" : 0
+    },
+    "unsnapRestore" : {
+      "int" : 0
+    },
+    "snapEdgeMarginTop" : {
+      "float" : 5
+    },
+    "snapModifiers" : {
+      "int" : 0
+    },
+    "altThirdCycle" : {
+      "int" : 0
+    },
+    "launchOnLogin" : {
+      "bool" : true
+    },
+    "hideMenubarIcon" : {
+      "bool" : false
+    },
+    "minimumWindowHeight" : {
+      "float" : 0
+    },
+    "snapEdgeMarginBottom" : {
+      "float" : 5
+    },
+    "traverseSingleScreen" : {
+      "int" : 0
+    },
+    "footprintFade" : {
+      "int" : 0
+    },
+    "screenEdgeGapRight" : {
+      "float" : 0
+    },
+    "screenEdgeGapLeft" : {
+      "float" : 0
+    },
+    "showAllActionsInMenu" : {
+      "int" : 0
+    },
+    "alternateDefaultShortcuts" : {
+      "bool" : true
+    },
+    "subsequentExecutionMode" : {
+      "int" : 1
+    },
+    "footprintBorderWidth" : {
+      "float" : 2
+    },
+    "relaunchOpensMenu" : {
+      "bool" : false
+    },
+    "windowSnapping" : {
+      "int" : 0
+    },
+    "snapEdgeMarginLeft" : {
+      "float" : 5
+    },
+    "todo" : {
+      "int" : 0
+    },
+    "snapEdgeMarginRight" : {
+      "float" : 5
+    },
+    "obtainWindowOnClick" : {
+      "int" : 0
+    },
+    "footprintColor" : {
+
+    },
+    "footprintAlpha" : {
+      "float" : 0.30000001192092896
+    },
+    "minimumWindowWidth" : {
+      "float" : 0
+    },
+    "attemptMatchOnNextPrevDisplay" : {
+      "int" : 0
+    },
+    "almostMaximizeHeight" : {
+      "float" : 0
+    },
+    "resizeOnDirectionalMove" : {
+      "bool" : false
+    },
+    "sizeOffset" : {
+      "float" : 0
+    }
+  },
+  "shortcuts" : {
+    "leftHalf" : {
+      "keyCode" : 4,
+      "modifierFlags" : 1835008
+    },
+    "firstThird" : {
+      "keyCode" : 38,
+      "modifierFlags" : 1441792
+    },
+    "nextDisplay" : {
+      "keyCode" : 124,
+      "modifierFlags" : 1835008
+    },
+    "bottomRight" : {
+      "keyCode" : 37,
+      "modifierFlags" : 1703936
+    },
+    "previousDisplay" : {
+      "keyCode" : 123,
+      "modifierFlags" : 1835008
+    },
+    "restore" : {
+      "keyCode" : 51,
+      "modifierFlags" : 786432
+    },
+    "topRight" : {
+      "keyCode" : 40,
+      "modifierFlags" : 1703936
+    },
+    "bottomHalf" : {
+      "keyCode" : 38,
+      "modifierFlags" : 1835008
+    },
+    "smaller" : {
+      "keyCode" : 27,
+      "modifierFlags" : 786432
+    },
+    "firstTwoThirds" : {
+      "keyCode" : 4,
+      "modifierFlags" : 1441792
+    },
+    "rightHalf" : {
+      "keyCode" : 37,
+      "modifierFlags" : 1835008
+    },
+    "lastThird" : {
+      "keyCode" : 37,
+      "modifierFlags" : 1441792
+    },
+    "larger" : {
+      "keyCode" : 24,
+      "modifierFlags" : 786432
+    },
+    "center" : {
+      "keyCode" : 5,
+      "modifierFlags" : 1835008
+    },
+    "bottomLeft" : {
+      "keyCode" : 38,
+      "modifierFlags" : 1703936
+    },
+    "centerThird" : {
+      "keyCode" : 40,
+      "modifierFlags" : 1441792
+    },
+    "topHalf" : {
+      "keyCode" : 40,
+      "modifierFlags" : 1835008
+    },
+    "lastTwoThirds" : {
+      "keyCode" : 41,
+      "modifierFlags" : 1441792
+    },
+    "topLeft" : {
+      "keyCode" : 4,
+      "modifierFlags" : 1703936
+    }
+  },
+  "bundleId" : "com.knollsoft.Rectangle",
+  "version" : "50"
+}
