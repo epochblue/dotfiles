@@ -3,14 +3,27 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 cask_args appdir: "~/Applications", require_sha: true
 
-# Release the hounds!
+brew 'ack'
 brew "bash"
 brew "bash-completion@2"
-brew "gh"
-brew "git"
-brew "jq"
-brew "python"
-brew "tree"
-brew "youtube-dl"
+brew 'ffmpeg'
+brew 'flac'
+brew 'gh'
+brew 'git'
+brew 'heroku'
+brew 'jq'
+brew 'lame'
+brew 'markdown'
+brew 'mp3info'
+brew 'node'
+brew 'postgresql'
+brew 'python3'
+brew 'redis'
+brew 'sqlite'
+brew 'tree'
+brew 'youtube-dl'
 
 cask "macvim"
+cask "rectangle"
+cask "keepassxc"
+cask "launchbar"
