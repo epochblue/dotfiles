@@ -53,7 +53,7 @@ set number
 set relativenumber
 set colorcolumn=80
 set signcolumn=yes
-highlight SignColumn ctermbg=none
+highlight! link SignColumn LineNr
 
 
 " gui settings
@@ -79,10 +79,25 @@ Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 
-" GitGutter config
+" plugin configs
 set updatetime=100
-highlight! link SignColumn LineNr
-let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_set_sign_backgrounds=1
+
+let g:fzf_colors =
+  \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'border':  ['fg', 'Ignore'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment'] }
+
 
 
 " plugin commands
