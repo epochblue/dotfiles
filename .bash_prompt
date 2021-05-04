@@ -67,7 +67,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 
 set_prompt() {
     set_active_venv
-    PS1="${SYMBOL} ${YLW}${ACTIVE_VENV} ${WHT}\w ${GRN}$(__git_ps1 "(%s)")${WHT}${CLR} \$ "
+    PS1="${SYMBOL} ${RED}${ACTIVE_VENV} ${CLR}\w ${CYN}$(__git_ps1 "(%s)")${CLR} \$ "
 }
 
 PROMPT_COMMAND=set_prompt
