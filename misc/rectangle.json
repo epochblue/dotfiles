@@ -6,11 +6,11 @@
     "curtainChangeSize" : {
       "int" : 0
     },
-    "allowAnyShortcut" : {
-      "bool" : true
-    },
     "ignoredSnapAreas" : {
       "int" : 0
+    },
+    "allowAnyShortcut" : {
+      "bool" : true
     },
     "centerHalfCycles" : {
       "int" : 0
@@ -27,14 +27,14 @@
     "SUEnableAutomaticChecks" : {
       "bool" : true
     },
-    "todoSidebarWidth" : {
-      "float" : 400
-    },
     "gapSize" : {
       "float" : 1
     },
     "disabledApps" : {
 
+    },
+    "todoSidebarWidth" : {
+      "float" : 400
     },
     "todoApplication" : {
 
@@ -60,17 +60,17 @@
     "hideMenubarIcon" : {
       "bool" : false
     },
-    "minimumWindowHeight" : {
-      "float" : 0
-    },
-    "snapEdgeMarginBottom" : {
-      "float" : 5
-    },
     "traverseSingleScreen" : {
       "int" : 0
     },
     "footprintFade" : {
       "int" : 0
+    },
+    "snapEdgeMarginBottom" : {
+      "float" : 5
+    },
+    "minimumWindowHeight" : {
+      "float" : 0
     },
     "screenEdgeGapRight" : {
       "float" : 0
@@ -78,14 +78,14 @@
     "screenEdgeGapLeft" : {
       "float" : 0
     },
-    "showAllActionsInMenu" : {
-      "int" : 0
-    },
     "alternateDefaultShortcuts" : {
       "bool" : true
     },
     "subsequentExecutionMode" : {
       "int" : 1
+    },
+    "showAllActionsInMenu" : {
+      "int" : 0
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -102,11 +102,11 @@
     "todo" : {
       "int" : 0
     },
-    "snapEdgeMarginRight" : {
-      "float" : 5
-    },
     "obtainWindowOnClick" : {
       "int" : 0
+    },
+    "snapEdgeMarginRight" : {
+      "float" : 5
     },
     "footprintColor" : {
 
@@ -131,29 +131,17 @@
     }
   },
   "shortcuts" : {
-    "leftHalf" : {
-      "keyCode" : 4,
-      "modifierFlags" : 1835008
-    },
     "firstThird" : {
       "keyCode" : 38,
       "modifierFlags" : 1441792
-    },
-    "nextDisplay" : {
-      "keyCode" : 124,
-      "modifierFlags" : 1835008
     },
     "bottomRight" : {
       "keyCode" : 37,
       "modifierFlags" : 1703936
     },
-    "previousDisplay" : {
-      "keyCode" : 123,
+    "leftHalf" : {
+      "keyCode" : 4,
       "modifierFlags" : 1835008
-    },
-    "restore" : {
-      "keyCode" : 51,
-      "modifierFlags" : 786432
     },
     "topRight" : {
       "keyCode" : 40,
@@ -163,33 +151,29 @@
       "keyCode" : 38,
       "modifierFlags" : 1835008
     },
-    "smaller" : {
-      "keyCode" : 27,
-      "modifierFlags" : 786432
+    "rightHalf" : {
+      "keyCode" : 37,
+      "modifierFlags" : 1835008
     },
     "firstTwoThirds" : {
       "keyCode" : 4,
       "modifierFlags" : 1441792
     },
-    "rightHalf" : {
-      "keyCode" : 37,
-      "modifierFlags" : 1835008
+    "topLeft" : {
+      "keyCode" : 4,
+      "modifierFlags" : 1703936
     },
     "lastThird" : {
       "keyCode" : 37,
       "modifierFlags" : 1441792
     },
-    "larger" : {
-      "keyCode" : 24,
-      "modifierFlags" : 786432
+    "bottomLeft" : {
+      "keyCode" : 38,
+      "modifierFlags" : 1703936
     },
     "center" : {
       "keyCode" : 5,
       "modifierFlags" : 1835008
-    },
-    "bottomLeft" : {
-      "keyCode" : 38,
-      "modifierFlags" : 1703936
     },
     "centerThird" : {
       "keyCode" : 40,
@@ -202,10 +186,6 @@
     "lastTwoThirds" : {
       "keyCode" : 41,
       "modifierFlags" : 1441792
-    },
-    "topLeft" : {
-      "keyCode" : 4,
-      "modifierFlags" : 1703936
     }
   },
   "bundleId" : "com.knollsoft.Rectangle",
