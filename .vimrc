@@ -51,7 +51,7 @@ set ruler
 set showmatch
 set number
 set relativenumber
-set colorcolumn=80
+set colorcolumn=80,100
 set signcolumn=yes
 highlight! link SignColumn LineNr
 
@@ -101,11 +101,12 @@ let g:fzf_colors =
 
 
 " plugin commands
-nnoremap <C-p> :Files<cr>
+nnoremap <C-p> :GFiles<cr>
 
 
 " leader and remaps
 let mapleader = " "
+nnoremap <leader>t :sh<cr>
 
 
 " custom commands
