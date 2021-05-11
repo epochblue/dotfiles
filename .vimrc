@@ -26,6 +26,16 @@ set ignorecase
 set smartcase
 
 
+" autocomplete
+set shortmess+=c
+set completeopt=menuone,longest,preview
+
+if has('textprop')
+    set completeopt+=popup
+endif
+
+
+
 " indentation
 set autoindent
 set smartindent
@@ -43,7 +53,6 @@ set laststatus=2
 " baseline ui settings
 syntax enable
 set background=light
-let g:solarized_termcolors=256
 colorscheme solarized
 set guicursor=
 set cmdheight=2
@@ -76,6 +85,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -99,14 +109,23 @@ let g:fzf_colors =
     \ 'header':  ['fg', 'Comment'] }
 
 
-
-" plugin commands
-nnoremap <C-p> :GFiles<cr>
-
-
-" leader and remaps
+" set a new leader key
 let mapleader = " "
-nnoremap <leader>t :sh<cr>
+
+
+" fzf remaps
+nnoremap <C-p> :GFiles<cr>
+nnoremap <C-f> :BLines<cr>
+nnoremap <C-g> :Lines<cr>
+nnoremap <leader>F :Ag<cr>
+
+
+" fugitive remaps
+nnoremap <leader>g :Git<cr>
+
+
+" misc remaps
+nnoremap <leader>T :sh<cr>
 
 
 " custom commands
