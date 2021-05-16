@@ -53,7 +53,6 @@ set laststatus=2
 " baseline ui settings
 syntax enable
 set background=light
-colorscheme solarized
 set guicursor=
 set cmdheight=2
 set ruler
@@ -62,7 +61,6 @@ set number
 set relativenumber
 set colorcolumn=80,100
 set signcolumn=yes
-highlight! link SignColumn LineNr
 
 
 " gui settings
@@ -87,6 +85,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
+"
+" Set the colorscheme, now that it's loaded
+colorscheme solarized
+highlight! link SignColumn LineNr
 
 
 " plugin configs
