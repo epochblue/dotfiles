@@ -65,9 +65,11 @@ esac
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
+[[ -r "/usr/local/etc/bash_completion.d/git-prompt.sh" ]] && . "/usr/local/etc/bash_completion.d/git-prompt.sh"
+
 set_prompt() {
     set_active_venv
-    PS1="${SYMBOL} ${RED}${ACTIVE_VENV} ${CLR}\w ${CYN}$(__git_ps1 "(%s)")${CLR} \$ "
+    PS1="${SYMBOL} ${RED}${ACTIVE_VENV} ${CLR}\w ${CYN}$(__git_ps1 "(%s)")${CLR}\n\$ "
 }
 
 PROMPT_COMMAND=set_prompt
