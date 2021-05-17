@@ -14,6 +14,8 @@ set backspace=indent,eol,start
 set noswapfile
 set nowrap
 set scrolloff=6
+set splitright
+set splitbelow
 filetype plugin indent on
 scriptencoding utf8
 fixdel
