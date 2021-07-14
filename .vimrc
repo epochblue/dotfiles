@@ -55,7 +55,7 @@ set laststatus=2
 " baseline ui settings
 syntax enable
 set background=light
-set guicursor=
+set guicursor="a:block-Cursor,a:blinkwait500-blinkoff250-blinkon250-Cursor/lCursor"
 set cmdheight=2
 set ruler
 set showmatch
