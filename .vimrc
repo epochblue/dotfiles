@@ -130,7 +130,11 @@ nnoremap <leader>g :Git<cr>
 
 
 " misc remaps
-nnoremap <leader>T :sh<cr>
+if has('terminal')
+    nnoremap <leader>T :terminal<cr>
+else
+    nnoremap <leader>T :sh<cr>
+endif
 
 
 " custom commands
