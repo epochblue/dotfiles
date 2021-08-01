@@ -4,8 +4,8 @@ tap "homebrew/cask"
 cask_args appdir: "~/Applications", require_sha: true
 
 brew 'ack'
-brew "bash"
-brew "bash-completion@2"
+brew 'bash'
+brew 'bash-completion@2'
 brew 'ffmpeg'
 brew 'flac'
 brew 'fzf'
@@ -14,7 +14,7 @@ brew 'git'
 brew 'heroku'
 brew 'jq'
 brew 'lame'
-brew 'markdown'
+brew 'multimarkdown'
 brew 'mp3info'
 brew 'node'
 brew 'postgresql'
