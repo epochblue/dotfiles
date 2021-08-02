@@ -7,15 +7,11 @@ brew 'ack'
 brew 'bash'
 brew 'bash-completion@2'
 brew 'ffmpeg'
-brew 'flac'
 brew 'fzf'
 brew 'gh'
 brew 'git'
-brew 'heroku'
 brew 'jq'
-brew 'lame'
 brew 'multimarkdown'
-brew 'mp3info'
 brew 'node'
 brew 'postgresql'
 brew 'python3'
@@ -29,3 +25,4 @@ cask "macvim"
 cask "rectangle"
 cask "keepassxc"
 cask "launchbar"
+cask "airbuddy"
