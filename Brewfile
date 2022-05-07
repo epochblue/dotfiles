@@ -21,15 +21,15 @@ brew 'the_silver_searcher'
 brew 'tree'
 brew 'youtube-dl'
 
-cask "macvim"
-cask "rectangle"
-cask "keepassxc"
-cask "launchbar"
+cask "acorn"
 cask "airbuddy"
 cask "hey"
+cask "keepassxc"
+cask "launchbar"
+cask "macvim"
+cask "netnewswire"
+cask "openemu"
+cask "rectangle"
+cask "slack"
 cask "soulver"
 cask "steam"
-cask "openemu"
-cask "acorn"
-cask "slack"
-cask "netnewswire"
