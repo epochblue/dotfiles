@@ -19,7 +19,7 @@ brew 'redis'
 brew 'sqlite'
 brew 'the_silver_searcher'
 brew 'tree'
-brew 'youtube-dl'
+brew 'yt-dlp'
 
 cask "acorn"
 cask "airbuddy"
