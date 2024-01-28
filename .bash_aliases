@@ -60,6 +60,19 @@ gpw() {
     esac
 }
 
+heic2jpg() {
+    for i in $(ls *.HEIC); do
+        f=$(basename -s .HEIC $i)
+        sips -s format jpeg $i --out "$f.jpg" --resampleWidth 1000
+    done;
+
+    # run it again in case there are lowercase extensions
+    for i in $(ls *.heic); do
+        f=$(basename -s .heic $i)
+        sips -s format jpeg $i --out "$f.jpg" --resampleWidth 1000
+    done;
+}
+
 # create directories and cd to the first one
 mkcd() { [ -n "$1" ] && mkdir -p "$@" && cd "$1"; }
 
