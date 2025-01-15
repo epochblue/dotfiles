@@ -85,7 +85,7 @@ repeat() { n=$1; shift; while [ $(( n -= 1 )) -ge 0 ]; do "$@"; done; }
 # download the audio track from youtube (requires youtube-dl and ffmpeg/avconv)
 ytdl() {
     local url=$1
-    yt-dlp --add-metadata --audio-format=mp3 --write-thumbnail --convert-thumbnails "jpg" -f 'bestaudio[ext=m4a]' -o '%(title)s.%(ext)s' "$url"
+    yt-dlp --add-metadata --write-thumbnail --convert-thumbnails "jpg" -f "m4a" -o '%(title)s.%(ext)s' "$url"
 }
 
 # run the given file through github's markdown parser
