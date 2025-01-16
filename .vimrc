@@ -80,16 +80,25 @@ endif
 let mapleader = " "
 
 
+" tab fast travel
+nnoremap <leader>ll gt<cr>
+nnoremap <leader>hh gT<cr>
+
+
 " misc remaps
 if has('terminal')
-    nnoremap <leader>T :terminal<cr>
+    nnoremap <leader>T :terminal bash<cr>
 else
     nnoremap <leader>T :sh<cr>
 endif
 
+nnoremap <leader>ev :tabe ~/.vimrc<cr>
+nnoremap <leader>sv :source ~/.vimrc<cr>
+
 
 " custom commands
 command! -nargs=* Wrap set wrap linebreak nolist
+command! -nargs=* Unwrap set nowrap linebreak nolist
 
 
 " auto commands
