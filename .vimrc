@@ -78,7 +78,7 @@ endif
 
 
 " set a new leader key
-let mapleader = " "
+let mapleader=" "
 
 
 " tab fast travel
