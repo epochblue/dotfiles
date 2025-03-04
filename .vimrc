@@ -67,6 +67,7 @@ set colorcolumn=80,100
 if has('gui_running')
   set mousehide
   set guioptions=Ace
+  set guifont=Source\ Code\ Pro:h16
 endif
 
 
