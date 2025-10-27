@@ -20,6 +20,9 @@ filetype plugin indent on
 scriptencoding utf8
 fixdel
 
+" use the system clipboard
+set clipboard=unnamed
+
 
 " searching
 set nohlsearch
@@ -28,8 +31,15 @@ set ignorecase
 set smartcase
 
 
+" use silver searcher instead of grep, if available
+if executable('ag')
+    set grepprg=ag\ --vimgrep\ $*
+    set grepformat^=%f:%l:%c:%m
+endif
+
+
 " autocomplete
-set shortmess+=c
+set shortmess+=ac
 set completeopt=menuone,longest,preview
 
 if has('textprop')
@@ -71,35 +81,61 @@ if has('gui_running')
 endif
 
 
+" netrw settings (more NERDtree-ish)
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 0
+let g:netrw_winsize = 30
+
+
 " set shell
 if has('unix')
   let shell='bash'
 endif
 
 
+" custom remaps
+nnoremap <C-h> :copen<cr>
+nnoremap <C-l> :cclose<cr>
+nnoremap <C-j> :cnext<cr>
+nnoremap <C-k> :cprev<cr>
+
+
 " set a new leader key
 let mapleader=" "
 
-
 " tab fast travel
-nnoremap <leader>ll gt<cr>
-nnoremap <leader>hh gT<cr>
+nnoremap <leader>] gt<cr>
+nnoremap <leader>[ gT<cr>
 
+" split fast travel
+nnoremap <leader>H <C-w>h
+nnoremap <leader>J <C-w>j
+nnoremap <leader>K <C-w>k
+nnoremap <leader>L <C-w>l
+nnoremap <leader>Q <C-w>q
 
-" misc remaps
-if has('terminal')
-    nnoremap <leader>T :terminal bash<cr>
-else
-    nnoremap <leader>T :sh<cr>
-endif
+" open a file explorer
+nnoremap <leader>E :Vex<cr>
 
+" edit/source my .vimrc more easily
 nnoremap <leader>ev :tabe ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
+
+" it can be handy to have an in-vim terminal...
+if has('terminal')
+    " terminal size = 10 lines tall x window width
+    set termwinsize=10*0
+    nnoremap <leader>T :terminal<cr>
+else
+    nnoremap <leader>T :bash<cr>
+endif
 
 
 " custom commands
 command! -nargs=* Wrap set wrap linebreak nolist
-command! -nargs=* Unwrap set nowrap linebreak nolist
+command! -nargs=* Nowrap set nowrap linebreak nolist
 
 
 " auto commands
