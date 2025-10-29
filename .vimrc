@@ -65,7 +65,6 @@ set laststatus=2
 
 " basic ui settings
 syntax enable
-set background=light
 set guicursor="a:block-Cursor,a:blinkwait500-blinkoff250-blinkon250-Cursor/lCursor"
 set cmdheight=2
 set ruler
@@ -77,8 +76,8 @@ set colorcolumn=80,100
 
 " colorscheme settings (use rosepine_dawn)
 let g:disable_bg=1
-let g:disable_float_bg=1
-silent! colorscheme rosepine_dawn
+let g:disable_float_bg=0
+silent! Colorscheme rosepine_dawn
 
 
 

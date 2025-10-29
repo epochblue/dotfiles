@@ -46,11 +46,11 @@ else
   hi Normal guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
   hi NormalNC guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
   hi SignColumn guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
-  hi StatusLineNC guifg=#9893a5 guibg=#faf4ed gui=NONE cterm=NONE
+  hi StatusLineNC guifg=#fffaf3 guibg=#d7827e gui=NONE cterm=NONE
 endif
 if get(g:,'disable_float_bg',0)
-  hi DarkenedPanel guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi DarkenedStatusline guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+  hi DarkenedPanel guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=#d7827e cterm=NONE
+  hi DarkenedStatusline guifg=NONE guibg=NONE gui=NONE ctermfg=#fffaf3 ctermbg=#9893a5 cterm=NONE
   hi Folded guifg=#575279 guibg=NONE gui=NONE cterm=NONE
   hi NormalFloat guifg=#575279 guibg=NONE gui=NONE cterm=NONE
   hi Pmenu guifg=#797593 guibg=NONE gui=NONE cterm=NONE
@@ -67,7 +67,7 @@ else
   hi TabLine guifg=#797593 guibg=#fffaf3 gui=NONE cterm=NONE
   hi TabLineFill guifg=NONE guibg=#fffaf3 gui=NONE cterm=NONE
 endif
-if !s:italics 
+if !s:italics
   hi Comment guifg=#9893a5 guibg=NONE gui=NONE cterm=NONE
 else
   hi Comment guifg=#9893a5 guibg=NONE gui=italic cterm=italic
@@ -75,7 +75,7 @@ else
     hi Comment gui=NONE cterm=NONE
   endif
 endif
-hi ColorColumn guifg=NONE guibg=#f2e9e1 gui=NONE cterm=NONE
+hi ColorColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
 hi Conceal guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#f4ede8 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#f4ede8 gui=NONE cterm=NONE
@@ -152,7 +152,7 @@ hi htmlH2 guifg=#56949f guibg=NONE gui=bold cterm=bold
 hi htmlH3 guifg=#d7827e guibg=NONE gui=bold cterm=bold
 hi htmlH4 guifg=#ea9d34 guibg=NONE gui=bold cterm=bold
 hi htmlH5 guifg=#286983 guibg=NONE gui=bold cterm=bold
-if !s:italics 
+if !s:italics
   hi htmlItalic guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 else
   hi htmlItalic guifg=NONE guibg=NONE gui=italic ctermfg=NONE ctermbg=NONE cterm=italic
@@ -172,7 +172,7 @@ hi markdownH4 guifg=#ea9d34 guibg=NONE gui=bold cterm=bold
 hi markdownH5 guifg=#286983 guibg=NONE gui=bold cterm=bold
 hi markdownH6 guifg=#56949f guibg=NONE gui=bold cterm=bold
 hi markdownLinkText guifg=#907aa9 guibg=NONE gui=underline cterm=underline
-if !s:italics 
+if !s:italics
   hi mkdCode guifg=#56949f guibg=NONE gui=NONE cterm=NONE
 else
   hi mkdCode guifg=#56949f guibg=NONE gui=italic cterm=italic
@@ -231,7 +231,7 @@ if s:t_Co >= 256
     hi TabLine ctermfg=103 ctermbg=231 cterm=NONE
     hi TabLineFill ctermfg=NONE ctermbg=231 cterm=NONE
   endif
-  if !s:italics 
+  if !s:italics
     hi Comment ctermfg=103 ctermbg=NONE cterm=NONE
   else
     hi Comment ctermfg=103 ctermbg=NONE cterm=italic
@@ -315,7 +315,7 @@ if s:t_Co >= 256
   hi htmlH3 ctermfg=174 ctermbg=NONE cterm=bold
   hi htmlH4 ctermfg=172 ctermbg=NONE cterm=bold
   hi htmlH5 ctermfg=24 ctermbg=NONE cterm=bold
-  if !s:italics 
+  if !s:italics
     hi htmlItalic ctermfg=NONE ctermbg=NONE cterm=NONE
   else
     hi htmlItalic ctermfg=NONE ctermbg=NONE cterm=italic
@@ -335,7 +335,7 @@ if s:t_Co >= 256
   hi markdownH5 ctermfg=24 ctermbg=NONE cterm=bold
   hi markdownH6 ctermfg=66 ctermbg=NONE cterm=bold
   hi markdownLinkText ctermfg=103 ctermbg=NONE cterm=underline
-  if !s:italics 
+  if !s:italics
     hi mkdCode ctermfg=66 ctermbg=NONE cterm=NONE
   else
     hi mkdCode ctermfg=66 ctermbg=NONE cterm=italic
