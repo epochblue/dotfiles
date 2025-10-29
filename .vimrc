@@ -30,6 +30,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+" update path to always do recursive searching from cwd
+set path+=**
 
 " use silver searcher instead of grep, if available
 if executable('ag')
@@ -73,6 +75,13 @@ set relativenumber
 set colorcolumn=80,100
 
 
+" colorscheme settings (use rosepine_dawn)
+let g:disable_bg=1
+let g:disable_float_bg=1
+silent! colorscheme rosepine_dawn
+
+
+
 " gui settings
 if has('gui_running')
   set mousehide
@@ -84,8 +93,8 @@ endif
 " netrw settings (more NERDtree-ish)
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 0
+let g:netrw_browse_split = 0
+let g:netrw_altv = 1
 let g:netrw_winsize = 30
 
 
@@ -93,13 +102,6 @@ let g:netrw_winsize = 30
 if has('unix')
   let shell='bash'
 endif
-
-
-" custom remaps
-nnoremap <C-h> :copen<cr>
-nnoremap <C-l> :cclose<cr>
-nnoremap <C-j> :cnext<cr>
-nnoremap <C-k> :cprev<cr>
 
 
 " set a new leader key
@@ -117,11 +119,16 @@ nnoremap <leader>L <C-w>l
 nnoremap <leader>Q <C-w>q
 
 " open a file explorer
-nnoremap <leader>E :Vex<cr>
+nnoremap <leader>E :Lex<cr>
 
 " edit/source my .vimrc more easily
 nnoremap <leader>ev :tabe ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
+
+" custom remaps
+nnoremap <leader>j :cnext<cr>
+nnoremap <leader>k :cprev<cr>
+
 
 " it can be handy to have an in-vim terminal...
 if has('terminal')
