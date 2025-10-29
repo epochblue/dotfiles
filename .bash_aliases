@@ -9,20 +9,12 @@ alias la="l"
 alias ltr="ls -hltr"
 alias tree="tree --charset=NULL"
 
-# python
-alias py="python"
-alias wo="workon"
-alias rmpyc='find . -name "*.pyc" -exec rm {} \;'
-alias zen='python -c "import this;"'
-
 # etc
 alias cdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 alias diff="diff --suppress-common-lines"
-alias m="mvim --remote-tab-silent"
-alias rrc="source ~/.bashrc"
+alias rerc="source ~/.bashrc"
 alias src="cd ~/src"
 alias t="tree"
-alias tl="tree -L"
 alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder"
 alias utime="date +%s"
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
