@@ -16,6 +16,7 @@ set encoding=utf-8
 set vb
 set wildmenu
 set showcmd
+set noshowmode
 set backspace=indent,eol,start
 set noswapfile
 set nowrap
@@ -65,7 +66,28 @@ set expandtab
 
 
 " status line
-set statusline=%{StatuslineGit()}\ %F%m\ %=l:\ %l/%L,\ c:\ %v\ %y
+let g:currentmode={
+    \ 'n'  : 'NORMAL',
+    \ 'no' : 'NORMAL,OP',
+    \ 'v'  : 'VISUAL',
+    \ 'V'  : 'V-LINE',
+    \ '^V' : 'V-BLOCK',
+    \ 's'  : 'SELECT',
+    \ 'S'  : 'S-LINE',
+    \ '^S' : 'S-BLOCK',
+    \ 'i'  : 'INSERT',
+    \ 'R'  : 'REPLACE',
+    \ 'Rv' : 'V-REPLACE',
+    \ 'c'  : 'COMMAND',
+    \ 'cv' : 'VIM EX',
+    \ 'ce' : 'EX',
+    \ 'r'  : 'PROMPT',
+    \ 'rm' : 'MORE',
+    \ 'r?' : 'CONFIRM',
+    \ '!'  : 'SHELL',
+    \ 't'  : 'TERMINAL'
+    \}
+set statusline=\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %F%m\ %=%l/%L:%v\ %y
 set laststatus=2
 
 
