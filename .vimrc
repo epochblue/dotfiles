@@ -1,6 +1,12 @@
 " .vimrc
 " Bill Israel [http://billisrael.info/]
 
+" useful functions
+function! StatuslineGit()
+  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  return strlen(l:branchname) > 0 ? '('.l:branchname.')' : ''
+endfunction
+
 " general settings
 set exrc
 set noerrorbells
@@ -59,7 +65,7 @@ set expandtab
 
 
 " status line
-set stl=%f\ %m\ %r\ line\ %l\ of\ %L\ [%p%%],\ column\ %c%=Type:%y
+set statusline=%{StatuslineGit()}\ %F%m\ %=l:\ %l/%L,\ c:\ %v\ %y
 set laststatus=2
 
 
@@ -78,7 +84,6 @@ set colorcolumn=80,100
 let g:disable_bg=1
 let g:disable_float_bg=0
 silent! Colorscheme rosepine_dawn
-
 
 
 " gui settings
