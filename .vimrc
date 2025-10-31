@@ -8,7 +8,6 @@ function! StatuslineGit()
 endfunction
 
 " general settings
-set exrc
 set noerrorbells
 set nocompatible
 set hidden
@@ -26,6 +25,7 @@ set splitbelow
 filetype plugin indent on
 scriptencoding utf8
 fixdel
+
 
 " use the system clipboard
 set clipboard=unnamed
@@ -87,7 +87,7 @@ let g:currentmode={
     \ '!'  : 'SHELL',
     \ 't'  : 'TERMINAL'
     \}
-set statusline=\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %F%m\ %=%l/%L:%v\ %y
+set statusline=\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %<%F%m\ %=%l/%L:%v\ %y
 set laststatus=2
 
 
@@ -158,8 +158,8 @@ nnoremap <leader>k :cprev<cr>
 
 " it can be handy to have an in-vim terminal...
 if has('terminal')
-    " terminal size = 10 lines tall x window width
-    set termwinsize=10*0
+    " terminal size = 12 lines tall x window width
+    set termwinsize=12*0
     nnoremap <leader>T :terminal<cr>
 else
     nnoremap <leader>T :bash<cr>
