@@ -46,15 +46,15 @@ else
   hi Normal guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
   hi NormalNC guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
   hi SignColumn guifg=#575279 guibg=#faf4ed gui=NONE cterm=NONE
-  hi StatusLineNC guifg=#fffaf3 guibg=#d7827e gui=NONE cterm=NONE
+  hi StatusLineNC guifg=#fffaf3 guibg=#9893a5 gui=NONE cterm=NONE
 endif
 if get(g:,'disable_float_bg',0)
   hi DarkenedPanel guifg=NONE guibg=#d7827e gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
   hi DarkenedStatusline guifg=#fffaf3 guibg=#9893a5 gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Folded guifg=#575279 guibg=NONE gui=NONE cterm=NONE
   hi NormalFloat guifg=#575279 guibg=NONE gui=NONE cterm=NONE
-  hi Pmenu guifg=#797593 guibg=NONE gui=NONE cterm=NONE
-  hi StatusLine guifg=#797593 guibg=NONE gui=NONE cterm=NONE
+  hi Pmenu guifg=#fffaf3 guibg=NONE gui=NONE cterm=NONE
+  hi StatusLine guifg=#fffaf3 guibg=#d7827e gui=NONE cterm=NONE
   hi TabLine guifg=#797593 guibg=NONE gui=NONE cterm=NONE
   hi TabLineFill guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 else
@@ -62,8 +62,8 @@ else
   hi DarkenedStatusline guifg=NONE guibg=#fffaf3 gui=NONE cterm=NONE
   hi Folded guifg=#575279 guibg=#fffaf3 gui=NONE cterm=NONE
   hi NormalFloat guifg=#575279 guibg=#fffaf3 gui=NONE cterm=NONE
-  hi Pmenu guifg=#797593 guibg=#fffaf3 gui=NONE cterm=NONE
-  hi StatusLine guifg=#797593 guibg=#fffaf3 gui=NONE cterm=NONE
+  hi Pmenu guifg=#fffaf3 guibg=#9893a5 gui=NONE cterm=NONE
+  hi StatusLine guifg=#faf4ed guibg=#d7827e gui=NONE cterm=NONE
   hi TabLine guifg=#797593 guibg=#fffaf3 gui=NONE cterm=NONE
   hi TabLineFill guifg=NONE guibg=#fffaf3 gui=NONE cterm=NONE
 endif
@@ -75,7 +75,7 @@ else
     hi Comment gui=NONE cterm=NONE
   endif
 endif
-hi ColorColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi ColorColumn guifg=#575279 guibg=#cecacd gui=NONE cterm=NONE
 hi Conceal guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#f4ede8 gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#f4ede8 gui=NONE cterm=NONE
@@ -98,7 +98,7 @@ hi NonText guifg=#9893a5 guibg=NONE gui=NONE cterm=NONE
 hi PmenuSbar guifg=NONE guibg=#f4ede8 gui=NONE cterm=NONE
 hi PmenuSel guifg=#575279 guibg=#f2e9e1 gui=NONE cterm=NONE
 hi PmenuThumb guifg=NONE guibg=#dfdad9 gui=NONE cterm=NONE
-hi PmenuMatch guifg=#575279 guibg=NONE gui=NONE cterm=NONE
+hi PmenuMatch guifg=#fffaf3 guibg=NONE gui=NONE cterm=NONE
 hi Question guifg=#ea9d34 guibg=NONE gui=NONE cterm=NONE
 hi Search guifg=NONE guibg=#dfdad9 gui=NONE cterm=NONE
 hi SpecialKey guifg=#56949f guibg=NONE gui=NONE cterm=NONE

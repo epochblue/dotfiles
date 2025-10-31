@@ -96,6 +96,7 @@ set showmatch
 set number
 set relativenumber
 set colorcolumn=80,100
+
 silent! colorscheme rosepine_dawn
 
 
