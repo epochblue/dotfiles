@@ -88,14 +88,15 @@ set laststatus=2
 
 
 " basic ui settings
-syntax enable
-set guicursor="a:block-Cursor,a:blinkwait500-blinkoff250-blinkon250-Cursor/lCursor"
+syntax on
+set termguicolors
 set cmdheight=2
 set noruler
 set showmatch
 set number
 set relativenumber
 set colorcolumn=80,100
+silent! colorscheme rosepine_dawn
 
 
 " netrw settings (more NERDtree-ish)
