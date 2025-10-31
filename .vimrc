@@ -1,12 +1,6 @@
 " .vimrc
 " Bill Israel [http://billisrael.info/]
 
-" useful functions
-function! StatuslineGit()
-  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0 ? '('.l:branchname.')' : ''
-endfunction
-
 " general settings
 set noerrorbells
 set nocompatible
@@ -26,10 +20,6 @@ scriptencoding utf8
 fixdel
 
 
-" use the system clipboard
-set clipboard=unnamed
-
-
 " searching
 set nohlsearch
 set incsearch
@@ -37,7 +27,7 @@ set ignorecase
 set smartcase
 
 " update path to always do recursive searching from cwd
-set path+=**
+set path+=,**
 
 " use silver searcher instead of grep, if available
 if executable('ag')
@@ -87,8 +77,14 @@ let g:currentmode={
     \ 't'  : 'TERMINAL'
     \}
 
+" get git branch for statusline
+function! StatuslineGit()
+  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  return strlen(l:branchname) > 0 ? '('.l:branchname.')' : ''
+endfunction
+
 set statusline=
-set statusline+=%{g:currentmode[mode()]}      " current mode
+set statusline+=%{g:currentmode[mode()]}        " current mode
 set statusline+=\ %{StatuslineGit()}            " current branch
 set statusline+=\ %<%F                          " full path
 set statusline+=%m                              " modified?
@@ -107,12 +103,6 @@ set showmatch
 set number
 set relativenumber
 set colorcolumn=80,100
-
-
-" colorscheme settings (use rosepine_dawn)
-let g:disable_bg=1
-let g:disable_float_bg=0
-silent! Colorscheme rosepine_dawn
 
 
 " netrw settings (more NERDtree-ish)
