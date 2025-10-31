@@ -87,7 +87,7 @@ let g:currentmode={
     \ '!'  : 'SHELL',
     \ 't'  : 'TERMINAL'
     \}
-set statusline=\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %<%F%m\ %=%l/%L:%v\ %y
+set statusline="\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %<%F%m\ %=%l/%L:%v\ %y"
 set laststatus=2
 
 
