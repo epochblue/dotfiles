@@ -77,15 +77,8 @@ let g:currentmode={
     \ 't'  : 'TERMINAL'
     \}
 
-" get git branch for statusline
-function! StatuslineGit()
-  let l:branchname = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  return strlen(l:branchname) > 0 ? '('.l:branchname.')' : ''
-endfunction
-
 set statusline=
 set statusline+=%{g:currentmode[mode()]}        " current mode
-set statusline+=\ %{StatuslineGit()}            " current branch
 set statusline+=\ %<%F                          " full path
 set statusline+=%m                              " modified?
 set statusline+=%=                              " right align
@@ -98,7 +91,7 @@ set laststatus=2
 syntax enable
 set guicursor="a:block-Cursor,a:blinkwait500-blinkoff250-blinkon250-Cursor/lCursor"
 set cmdheight=2
-set ruler
+set noruler
 set showmatch
 set number
 set relativenumber
