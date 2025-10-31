@@ -14,7 +14,6 @@ set hidden
 set encoding=utf-8
 set vb
 set wildmenu
-set showcmd
 set noshowmode
 set backspace=indent,eol,start
 set noswapfile
@@ -87,7 +86,15 @@ let g:currentmode={
     \ '!'  : 'SHELL',
     \ 't'  : 'TERMINAL'
     \}
-set statusline="\ %{g:currentmode[mode()]}\ %{StatuslineGit()}\ %<%F%m\ %=%l/%L:%v\ %y"
+
+set statusline=
+set statusline+=%{g:currentmode[mode()]}      " current mode
+set statusline+=\ %{StatuslineGit()}            " current branch
+set statusline+=\ %<%F                          " full path
+set statusline+=%m                              " modified?
+set statusline+=%=                              " right align
+set statusline+=%l/%L:%v                        " line & column numbers
+set statusline+=\ %y                            " filetype
 set laststatus=2
 
 
@@ -106,14 +113,6 @@ set colorcolumn=80,100
 let g:disable_bg=1
 let g:disable_float_bg=0
 silent! Colorscheme rosepine_dawn
-
-
-" gui settings
-if has('gui_running')
-  set mousehide
-  set guioptions=Ace
-  set guifont=Source\ Code\ Pro:h16
-endif
 
 
 " netrw settings (more NERDtree-ish)

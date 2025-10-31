@@ -49,8 +49,8 @@ else
   hi StatusLineNC guifg=#fffaf3 guibg=#d7827e gui=NONE cterm=NONE
 endif
 if get(g:,'disable_float_bg',0)
-  hi DarkenedPanel guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=#d7827e cterm=NONE
-  hi DarkenedStatusline guifg=NONE guibg=NONE gui=NONE ctermfg=#fffaf3 ctermbg=#9893a5 cterm=NONE
+  hi DarkenedPanel guifg=NONE guibg=#d7827e gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+  hi DarkenedStatusline guifg=#fffaf3 guibg=#9893a5 gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Folded guifg=#575279 guibg=NONE gui=NONE cterm=NONE
   hi NormalFloat guifg=#575279 guibg=NONE gui=NONE cterm=NONE
   hi Pmenu guifg=#797593 guibg=NONE gui=NONE cterm=NONE
