@@ -16,7 +16,7 @@ set scrolloff=6
 set splitright
 set splitbelow
 filetype plugin indent on
-scriptencoding utf8
+scriptencoding utf-8
 fixdel
 
 
