@@ -64,6 +64,7 @@ else
   hi NormalFloat guifg=#575279 guibg=#fffaf3 gui=NONE cterm=NONE
   hi Pmenu guifg=#fffaf3 guibg=#9893a5 gui=NONE cterm=NONE
   hi StatusLine guifg=#faf4ed guibg=#d7827e gui=NONE cterm=NONE
+  hi StatusFile guifg=#575279 guibg=#f2e9e1 gui=NONE cterm=NONE
   hi TabLine guifg=#797593 guibg=#fffaf3 gui=NONE cterm=NONE
   hi TabLineFill guifg=NONE guibg=#fffaf3 gui=NONE cterm=NONE
 endif

@@ -54,6 +54,17 @@ set shiftwidth=4
 set expandtab
 
 
+" basic ui settings
+syntax on
+set termguicolors
+set cmdheight=2
+set noruler
+set showmatch
+set number
+set relativenumber
+set colorcolumn=80,100
+silent! colorscheme rosepine_dawn
+
 " status line
 let g:currentmode={
     \ 'n'  : 'NORMAL',
@@ -79,25 +90,12 @@ let g:currentmode={
 
 set statusline=
 set statusline+=%{g:currentmode[mode()]}        " current mode
-set statusline+=\ %<%F                          " full path
+set statusline+=\ %#StatusFile#\ %<%F           " full path
 set statusline+=%m                              " modified?
-set statusline+=%=                              " right align
-set statusline+=%l/%L:%v                        " line & column numbers
+set statusline+=%=%*                            " right align
+set statusline+=\ %l/%L:%v                      " line & column numbers
 set statusline+=\ %y                            " filetype
 set laststatus=2
-
-
-" basic ui settings
-syntax on
-set termguicolors
-set cmdheight=2
-set noruler
-set showmatch
-set number
-set relativenumber
-set colorcolumn=80,100
-
-silent! colorscheme rosepine_dawn
 
 
 " netrw settings (more NERDtree-ish)
@@ -106,12 +104,6 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 30
-
-
-" set shell
-if has('unix')
-  let shell='bash'
-endif
 
 
 " set a new leader key
@@ -145,8 +137,6 @@ if has('terminal')
     " terminal size = 12 lines tall x window width
     set termwinsize=12*0
     nnoremap <leader>T :terminal<cr>
-else
-    nnoremap <leader>T :bash<cr>
 endif
 
 
