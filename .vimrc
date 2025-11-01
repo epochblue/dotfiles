@@ -65,6 +65,13 @@ set relativenumber
 set colorcolumn=80,100
 silent! colorscheme rosepine_dawn
 
+" for the rare cases i run this in a gui
+if has('gui_running')
+  set mousehide
+  set guioptions=c
+  set guifont=Source\ Code\ Pro:h16
+endif
+
 " status line
 let g:currentmode={
     \ 'n'  : 'NORMAL',
