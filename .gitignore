@@ -1,5 +1,8 @@
 .DS_Store
 *.swp
 .vim/.netrwhist
-.vim/plugged
 Brewfile.lock.json
+
+# vim plugins
+.vim/pack/*
+!.vim/pack/.gitkeep

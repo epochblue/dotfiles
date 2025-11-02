@@ -57,6 +57,8 @@ set expandtab
 " basic ui settings
 syntax on
 set termguicolors
+set signcolumn=yes
+set updatetime=250
 set cmdheight=2
 set noruler
 set showmatch
@@ -96,7 +98,7 @@ let g:currentmode={
     \}
 
 set statusline=
-set statusline+=%{g:currentmode[mode()]}        " current mode
+set statusline+=\ %{g:currentmode[mode()]}      " current mode
 set statusline+=\ %#StatusFile#\ %<%F           " full path
 set statusline+=%m                              " modified?
 set statusline+=%=%*                            " right align
@@ -119,13 +121,6 @@ let mapleader=" "
 " tab fast travel
 nnoremap <leader>] gt<cr>
 nnoremap <leader>[ gT<cr>
-
-" split fast travel
-nnoremap <leader>H <C-w>h
-nnoremap <leader>J <C-w>j
-nnoremap <leader>K <C-w>k
-nnoremap <leader>L <C-w>l
-nnoremap <leader>Q <C-w>q
 
 " open a file explorer
 nnoremap <leader>E :Lex<cr>
