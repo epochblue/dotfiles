@@ -67,11 +67,14 @@ set relativenumber
 set colorcolumn=80,100
 silent! colorscheme rosepine_dawn
 
+
 " for the rare cases i run this in a gui
 if has('gui_running')
   set mousehide
   set guioptions=c
   set guifont=Source\ Code\ Pro:h16
+  set guicursor=n-c-v:block-Cursor-blinkwait0-blinkon0-blinkoff0
+  set guicursor+=i-ci:hor10-Cursor-blinkon400-blinkwait500-blinkoff400
 endif
 
 " status line
@@ -153,3 +156,7 @@ augroup ON_WRITE
     autocmd BufWritePre * %s/\s\+$//e
 augroup END
 
+
+" low-rent snippets
+nnoremap <leader>Sh :0read $HOME/.vim/templates/html.template<CR>4jf>a
+nnoremap <leader>Sp :0read $HOME/.vim/templates/python.template<CR>5j^cw
