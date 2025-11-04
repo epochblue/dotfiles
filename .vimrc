@@ -12,7 +12,6 @@ set noshowmode
 set backspace=indent,eol,start
 set noswapfile
 set nowrap
-set scrolloff=6
 set splitright
 set splitbelow
 filetype plugin indent on
@@ -65,6 +64,7 @@ set showmatch
 set number
 set relativenumber
 set colorcolumn=80,100
+set scrolloff=8
 silent! colorscheme rosepine_dawn
 
 
