@@ -27,7 +27,7 @@ set ignorecase
 set smartcase
 
 " update path to always do recursive searching from cwd
-set path+=,**
+set path+=**
 
 " use silver searcher instead of grep, if available
 if executable('ag')
@@ -159,4 +159,4 @@ augroup END
 
 " low-rent snippets
 nnoremap <leader>Sh :0read $HOME/.vim/templates/html.template<CR>4jf>a
-nnoremap <leader>Sp :0read $HOME/.vim/templates/python.template<CR>5j^cw
+nnoremap <leader>Sps :0read $HOME/.vim/templates/python.template<CR>5j^cw
