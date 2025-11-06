@@ -122,8 +122,8 @@ let g:netrw_winsize = 30
 let mapleader=" "
 
 " tab fast travel
-nnoremap <leader>] gt<cr>
-nnoremap <leader>[ gT<cr>
+nnoremap <Tab> gt<cr>
+nnoremap <S-Tab> gT<cr>
 
 " open a file explorer
 nnoremap <leader>E :Lex<cr>
@@ -133,8 +133,10 @@ nnoremap <leader>ev :tabe ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 
 " custom remaps
-nnoremap <leader>j :cnext<cr>
-nnoremap <leader>k :cprev<cr>
+nnoremap <leader>q :copen<cr>
+nnoremap <leader>Q :cclose<ur>
+nnoremap <C-j> :cnext<cr>
+nnoremap <C-k> :cprev<cr>
 
 
 " it can be handy to have an in-vim terminal...
